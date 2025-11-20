@@ -1,0 +1,1 @@
+| celda |celda := CeldaMorph new.celda extent: 100 @ 100.celda openInWorld.

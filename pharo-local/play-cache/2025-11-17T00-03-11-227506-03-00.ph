@@ -1,0 +1,1 @@
+|c|c := Morph new.c color: Color lightGray.c position: 200@200.t := StringMorph contents: 'HOLA'.c addMorph: t.c on: #mouseUp do: [ Transcript show: 'CLICK!'; cr ].World addMorph: c.

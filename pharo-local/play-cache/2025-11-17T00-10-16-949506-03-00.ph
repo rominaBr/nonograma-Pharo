@@ -1,0 +1,1 @@
+|m|m := Morph new.m color: Color red.m extent: 100@50.m position: 300@300.m on: #mouseUp do: [ Transcript show: 'CLICK M'; cr ].sel addMorph: m.

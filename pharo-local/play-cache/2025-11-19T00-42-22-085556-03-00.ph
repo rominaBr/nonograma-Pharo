@@ -1,0 +1,1 @@
+|juego|juego:= Juego new initialize.juego cargarJugadoresDesde: 'jugadores.csv'.VentanaInicio openOn: juego.

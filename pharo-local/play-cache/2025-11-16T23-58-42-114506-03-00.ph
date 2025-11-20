@@ -1,0 +1,1 @@
+|m|m := StringMorph contents: 'Hola'.m color: Color black.m position: 200@200.m on: #mouseUp do: [ Transcript show: 'CLICK!'; cr ].World addMorph: m.

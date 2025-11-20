@@ -1,0 +1,1 @@
+|juego|juego:= Juego new initialize.Ventana openOn: juego.

@@ -1,0 +1,1 @@
+World submorphs    select: [ :m | m isKindOf: CeldaMorph ]    thenDo: [ :celda | celda delete ]

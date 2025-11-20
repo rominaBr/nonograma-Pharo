@@ -1,0 +1,1 @@
+World on: #mouseUp do: [ Transcript show: 'CLICK WORLD'; cr ].
