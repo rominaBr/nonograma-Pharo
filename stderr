@@ -1,117 +1,121 @@
-[31mDuplicatedSlotName: Slot #'juego' appeared twice in VentanaInicio
-[0m[ :other | 
-other name = current name
-	ifTrue: [ DuplicatedSlotName new
-			oldSlot: current;
-			newSlot: other;
-			host: host;
-			signal ] ] in FixedLayout(PointerLayout)>>checkSlotNames in Block: [ :other | ...
-OrderedCollection>>do:
-FixedLayout(PointerLayout)>>checkSlotNames
-FixedLayout(PointerLayout)>>checkSanity
-VentanaInicio class(ClassDescription)>>superclass:withLayoutType:slots:
-ShDefaultBuilderEnhancer>>configureClass:superclass:withLayoutType:slots:
-ShiftClassBuilder>>createClass
-ShiftClassBuilder>>build
-[ builder oldClass: oldClass.
-self copyClassSlotsFromExistingClass.
-newClass := builder build.
-self installInEnvironment: newClass.
-self installSubclassInSuperclass: newClass.
-builder builderEnhancer beforeMigratingClass: builder installer: self.
-builder builderEnhancer migrateToClass: newClass installer: self.
-builder builderEnhancer afterMigratingClass: builder installer: self.
-builder builderEnhancer
-	propagateChangesToRelatedClasses: newClass
-	installer: self ] in ShiftClassInstaller>>make in Block: [ builder oldClass: oldClass....
+[31mInstance of VentanaInicio did not understand #dibujarInstrucciones
+[0mVentanaInicio(Object)>>doesNotUnderstand: #dibujarInstrucciones
+VentanaInicio(VentanaBase)>>redibujarVentanaCon:
+VentanaInicio>>accionInstrucciones
+MorphEventSubscription>>notify:from:
+[ :s | result := result | ((s notify: anEvent from: sourceMorph) == true) ] in MorphicEventHandler>>notifyMorphsOfEvent:ofType:from: in Block: [ :s | result := result | ((s notify: anEvent from...etc...
+Set>>do:
+MorphicEventHandler>>notifyMorphsOfEvent:ofType:from:
+MorphicEventHandler>>mouseUp:fromMorph:
+ImageMorph(Morph)>>mouseUp:
+ImageMorph(Morph)>>handleMouseUp:
+MouseButtonEvent>>sentTo:
+ImageMorph(Morph)>>handleEvent:
+ImageMorph(Morph)>>handleFocusEvent:
+[ ActiveHand := self.
+ActiveEvent := anEvent.
+result := focusHolder
+	handleFocusEvent: (anEvent transformedBy: (focusHolder transformedFrom: self)) ] in HandMorph>>sendFocusEvent:to:clear: in Block: [ ActiveHand := self....
 BlockClosure>>on:do:
-ShiftClassInstaller>>make
-ShiftClassInstaller>>make:
-ShiftClassInstaller class>>make:
-VentanaBase class(Class)>>subclass:instanceVariableNames:classVariableNames:poolDictionaries:package:
-VentanaBase class(Class)>>subclass:instanceVariableNames:classVariableNames:package:
-UndefinedObject>>DoIt
-OpalCompiler>>evaluate
-ClySystemEnvironment>>compileANewClassFrom:notifying:startingFrom:
-ClyFullBrowser>>compileANewClassFrom:notifying:startingFrom:
-ClyClassDefinitionEditorToolMorph>>applyChanges
-[ self changesAreAboutApply.
-applied := self applyChanges ] in [ textMorph hasUnacceptedEdits: true.
-[ self changesAreAboutApply.
-applied := self applyChanges ]
-	on: Error
-	do: [ :err | 
-		textModel text: self editingText.
-		textMorph hasUnacceptedEdits: true.
-		err pass ].
-applied
-	ifTrue: [ textMorph hasUnacceptedEdits: false.
-		self textUpdated.
-		browser focusActiveTab ]
-	ifFalse: [ textModel text: self editingText.
-		textMorph hasUnacceptedEdits: true ] ] in ClyClassDefinitionEditorToolMorph(ClyTextEditorToolMorph)>>changesAccepted in Block: [ self changesAreAboutApply....
+WorldMorph>>becomeActiveDuring:
+HandMorph>>sendFocusEvent:to:clear:
+HandMorph>>sendEvent:focus:clear:
+HandMorph>>sendMouseEvent:
+HandMorph>>handleEvent:
+HandMorph>>processEventsFromQueue:
+HandMorph>>processEvents
+[ :h | 
+self activeHand: h.
+h processEvents.
+self activeHand: nil ] in WorldState>>doOneCycleNowFor: in Block: [ :h | ...
+Array(SequenceableCollection)>>do:
+WorldState>>handsDo:
+WorldState>>doOneCycleNowFor:
+WorldState>>doOneCycleFor:
+WorldMorph>>doOneCycle
+WorldMorph class>>doOneCycle
+[ [ WorldMorph doOneCycle.
+Processor yield.
+false ] whileFalse: [  ] ] in MorphicUIManager>>spawnNewProcess in Block: [ [ WorldMorph doOneCycle....
+[0m[31mInstance of VentanaInicio did not understand #informacionInicio
+[0mVentanaInicio(Object)>>doesNotUnderstand: #informacionInicio
+MorphEventSubscription>>notify:from:
+[ :s | result := result | ((s notify: anEvent from: sourceMorph) == true) ] in MorphicEventHandler>>notifyMorphsOfEvent:ofType:from: in Block: [ :s | result := result | ((s notify: anEvent from...etc...
+Set>>do:
+MorphicEventHandler>>notifyMorphsOfEvent:ofType:from:
+MorphicEventHandler>>mouseUp:fromMorph:
+ImageMorph(Morph)>>mouseUp:
+ImageMorph(Morph)>>handleMouseUp:
+MouseButtonEvent>>sentTo:
+ImageMorph(Morph)>>handleEvent:
+ImageMorph(Morph)>>handleFocusEvent:
+[ ActiveHand := self.
+ActiveEvent := anEvent.
+result := focusHolder
+	handleFocusEvent: (anEvent transformedBy: (focusHolder transformedFrom: self)) ] in HandMorph>>sendFocusEvent:to:clear: in Block: [ ActiveHand := self....
 BlockClosure>>on:do:
-[ textMorph hasUnacceptedEdits: true.
-[ self changesAreAboutApply.
-applied := self applyChanges ]
-	on: Error
-	do: [ :err | 
-		textModel text: self editingText.
-		textMorph hasUnacceptedEdits: true.
-		err pass ].
-applied
-	ifTrue: [ textMorph hasUnacceptedEdits: false.
-		self textUpdated.
-		browser focusActiveTab ]
-	ifFalse: [ textModel text: self editingText.
-		textMorph hasUnacceptedEdits: true ] ] in ClyClassDefinitionEditorToolMorph(ClyTextEditorToolMorph)>>changesAccepted in Block: [ textMorph hasUnacceptedEdits: true....
-BlockClosure>>ensure:
-ClyClassDefinitionEditorToolMorph(ClyTextEditorToolMorph)>>applyChangesBy:
-ClyClassDefinitionEditorToolMorph(ClyTextEditorToolMorph)>>changesAccepted
-MessageSend>>value
-MessageSend>>cull:
-MessageSend>>cull:cull:
-[ action cull: anAnnouncement cull: announcer ] in AnnouncementSubscription>>deliver: in Block: [ action cull: anAnnouncement cull: announcer ]
-[0muego in Block: [ self actualizarInfoPara: estado1 vidas: vLabel1 ...etc...
-CeldaMorph>>finalizarJugada:
-CeldaMorph>>manejarClickIzquierdo
-CeldaMorph>>mouseDown:
-CeldaMorph(Morph)>>handleMouseDown:
+WorldMorph>>becomeActiveDuring:
+HandMorph>>sendFocusEvent:to:clear:
+HandMorph>>sendEvent:focus:clear:
+HandMorph>>sendMouseEvent:
+HandMorph>>handleEvent:
+HandMorph>>processEventsFromQueue:
+HandMorph>>processEvents
+[ :h | 
+self activeHand: h.
+h processEvents.
+self activeHand: nil ] in WorldState>>doOneCycleNowFor: in Block: [ :h | ...
+Array(SequenceableCollection)>>do:
+WorldState>>handsDo:
+WorldState>>doOneCycleNowFor:
+WorldState>>doOneCycleFor:
+WorldMorph>>doOneCycle
+WorldMorph class>>doOneCycle
+[ [ WorldMorph doOneCycle.
+Processor yield.
+false ] whileFalse: [  ] ] in MorphicUIManager>>spawnNewProcess in Block: [ [ WorldMorph doOneCycle....
+[ self value.
+Processor terminateActive ] in BlockClosure>>newProcess in Block: [ self value....
+[0m[31mInstance of VentanaInicio did not understand #informacionInicio
+[0mVentanaInicio(Object)>>doesNotUnderstand: #informacionInicio
+MorphEventSubscription>>notify:from:
+[ :s | result := result | ((s notify: anEvent from: sourceMorph) == true) ] in MorphicEventHandler>>notifyMorphsOfEvent:ofType:from: in Block: [ :s | result := result | ((s notify: anEvent from...etc...
+Set>>do:
+MorphicEventHandler>>notifyMorphsOfEvent:ofType:from:
+MorphicEventHandler>>mouseUp:fromMorph:
+ImageMorph(Morph)>>mouseUp:
+ImageMorph(Morph)>>handleMouseUp:
 MouseButtonEvent>>sentTo:
-CeldaMorph(Morph)>>handleEvent:
-MorphicEventDispatcher>>dispatchMouseDown:with:
-MorphicEventDispatcher>>handleMouseDown:
-MouseButtonEvent>>sentTo:
-[ ^ anEvent sentTo: self ] in MorphicEventDispatcher>>dispatchEvent:with: in Block: [ ^ anEvent sentTo: self ]
-BlockClosure>>ensure:
-MorphicEventDispatcher>>dispatchEvent:with:
-CeldaMorph(Morph)>>processEvent:using:
-MorphicEventDispatcher>>dispatchMouseDown:with:
-MorphicEventDispatcher>>handleMouseDown:
-MouseButtonEvent>>sentTo:
-[ ^ anEvent sentTo: self ] in MorphicEventDispatcher>>dispatchEvent:with: in Block: [ ^ anEvent sentTo: self ]
-BlockClosure>>ensure:
-MorphicEventDispatcher>>dispatchEvent:with:
-Morph>>processEvent:using:
-MorphicEventDispatcher>>dispatchMouseDown:with:
-MorphicEventDispatcher>>handleMouseDown:
-MouseButtonEvent>>sentTo:
-[ ^ anEvent sentTo: self ] in MorphicEventDispatcher>>dispatchEvent:with: in Block: [ ^ anEvent sentTo: self ]
-BlockClosure>>ensure:
-MorphicEventDispatcher>>dispatchEvent:with:
-SystemWindow(Morph)>>processEvent:using:
-[0m[31mInstance of Partida did not understand #estadoJugadores
-[0mPartida(Object)>>doesNotUnderstand: #estadoJugadores
-CeldaMorph>>finalizarJugada:
-CeldaMorph>>manejarClickDerecho
-CeldaMorph>>mouseDown:
-CeldaMorph(Morph)>>handleMouseDown:
-MouseButtonEvent>>sentTo:
-CeldaMorph(Morph)>>handleEvent:
-MorphicEventDispatcher>>dispatchMouseDown:with:
-MorphicEventDispatcher>>handleMouseDown:
-MouseButtonEvent>>sentTo:
-[ ^ anEvent sentTo: self ] in MorphicEventDispatcher>>dispatchEvent:with: in Block: [ ^ anEvent sentTo: self ]
+ImageMorph(Morph)>>handleEvent:
+ImageMorph(Morph)>>handleFocusEvent:
+[ ActiveHand := self.
+ActiveEvent := anEvent.
+result := focusHolder
+	handleFocusEvent: (anEvent transformedBy: (focusHolder transformedFrom: self)) ] in HandMorph>>sendFocusEvent:to:clear: in Block: [ ActiveHand := self....
+BlockClosure>>on:do:
+WorldMorph>>becomeActiveDuring:
+HandMorph>>sendFocusEvent:to:clear:
+HandMorph>>sendEvent:focus:clear:
+HandMorph>>sendMouseEvent:
+HandMorph>>handleEvent:
+HandMorph>>processEventsFromQueue:
+HandMorph>>processEvents
+[ :h | 
+self activeHand: h.
+h processEvents.
+self activeHand: nil ] in WorldState>>doOneCycleNowFor: in Block: [ :h | ...
+Array(SequenceableCollection)>>do:
+WorldState>>handsDo:
+WorldState>>doOneCycleNowFor:
+WorldState>>doOneCycleFor:
+WorldMorph>>doOneCycle
+WorldMorph class>>doOneCycle
+[ [ WorldMorph doOneCycle.
+Processor yield.
+false ] whileFalse: [  ] ] in MorphicUIManager>>spawnNewProcess in Block: [ [ WorldMorph doOneCycle....
+[ self value.
+Processor terminateActive ] in BlockClosure>>newProcess in Block: [ self value....
+[0mpatchEvent:with: in Block: [ ^ anEvent sentTo: self ]
 BlockClosure>>ensure:
 MorphicEventDispatcher>>dispatchEvent:with:
 CeldaMorph(Morph)>>processEvent:using:

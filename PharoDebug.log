@@ -112389,3 +112389,2577 @@ MessageSend>>cull:cull:
 BlockClosure>>on:do:
 	Receiver: [ action cull: anAnnouncement cull: announcer ]
 	Arguments and temporary variables: 
+THERE_BE_DRAGONS_HERE
+Instance of VentanaJuego class did not understand #openOn:conJuego:
+27 November 2025 12:12:14.442788 am
+
+VM: Win32 - X64 - 6.2 - CoInterpreter VMMaker.oscog-eem.2509 uuid: 91e81f64-95de-4914-a960-8f842be3a194 Sep 13 2019
+StackToRegisterMappingCogit VMMaker.oscog-eem.2509 uuid: 91e81f64-95de-4914-a960-8f842be3a194 Sep 13 2019
+VM: 201907031441-pharo Guille@DESKTOP-MG6660L:projects/vm7/opensmalltalk-vm Date: Wed Jul 3 16:41:39 2019 CommitHash: 4e4c5b5a0 Plugins: 201907031441-pharo Guille@DESKTOP-MG6660L:projects/vm7/opensmalltalk-vm
+
+Image: Pharo8.0.0 [Build information: Pharo-8.0.0+build.1124.sha.0932da82f08175e906b0e2a8052120c823374e9f (64 Bit)]
+
+VentanaJuego class(Object)>>doesNotUnderstand: #openOn:conJuego:
+	Receiver: VentanaJuego
+	Arguments and temporary variables: 
+		aMessage: 	openOn: a Partida conJuego: a Juego
+		exception: 	MessageNotUnderstood: VentanaJuego class>> #openOn:conJuego:
+		resumeValue: 	ni
+	Receiver's instance variables: 
+		superclass: 	VentanaBase
+		methodDict: 	a MethodDictionary(#actualizarInfoPara:vidas:puntos:->VentanaJuego>...etc...
+		format: 	65541
+		layout: 	a FixedLayout
+		organization: 	a ClassOrganization
+		subclasses: 	#()
+		name: 	#VentanaJuego
+		classPool: 	a Dictionary()
+		sharedPools: 	an OrderedCollection()
+		environment: 	a SystemDictionary(lots of globals)
+		category: 	#'juego-UI'
+
+
+Juego>>iniciarPartida1P:dificultad:
+	Receiver: a Juego
+	Arguments and temporary variables: 
+		unJugador: 	a Jugador
+		unaDificultad: 	#facil
+		tablero: 	a Tablero
+		partida: 	a Partida
+		nombreArchivo: 	'soluciones_5x5.csv
+	Receiver's instance variables: 
+		jugadores: 	an OrderedCollection(a Jugador a Jugador a Jugador a Jugador)
+
+
+VentanaInicio>>accionFacil
+	Receiver: a VentanaInicio
+	Arguments and temporary variables: 
+
+	Receiver's instance variables: 
+		mainLayout: 	a Morph(102308864)
+		window: 	a SystemWindow(889037824) named: Griddlers
+		juego: 	a Juego
+		jugador1: 	a Jugador
+		jugador2: 	nil
+
+
+MorphEventSubscription>>notify:from:
+	Receiver: a MorphEventSubscription
+	Arguments and temporary variables: 
+		anEvent: 	[(415@294) mouseUp 175555041 nil]
+		sourceMorph: 	an ImageMorph(952043776)
+		arity: 	
+	Receiver's instance variables: 
+		event: 	#mouseUp
+		selector: 	#accionFacil
+		recipient: 	a VentanaInicio
+		valueParameter: 	nil
+
+
+[ :s | result := result | ((s notify: anEvent from: sourceMorph) == true) ] in MorphicEventHandler>>notifyMorphsOfEvent:ofType:from:
+	Receiver: a MorphicEventHandler
+	Arguments and temporary variables: 
+		anEvent: 	[(415@294) mouseUp 175555041 nil]
+		eventType: 	#mouseUp
+		sourceMorph: 	an ImageMorph(952043776)
+		result: 	false
+		s: 	a MorphEventSubscriptio
+	Receiver's instance variables: 
+		subscriptions: 	a Dictionary(#mouseUp->a Set(a MorphEventSubscription) )
+
+
+Set>>do:
+	Receiver: a Set(a MorphEventSubscription)
+	Arguments and temporary variables: 
+		aBlock: 	[ :s | result := result | ((s notify: anEvent from: sourceMorph) == tru...etc...
+		index: 	1
+		each: 	a MorphEventSubscriptio
+	Receiver's instance variables: 
+		tally: 	1
+		array: 	an Array(a MorphEventSubscription nil nil nil nil)
+
+
+MorphicEventHandler>>notifyMorphsOfEvent:ofType:from:
+	Receiver: a MorphicEventHandler
+	Arguments and temporary variables: 
+		result: 	false
+		anEvent: 	[(415@294) mouseUp 175555041 nil]
+		eventType: 	#mouseUp
+		sourceMorph: 	an ImageMorph(952043776
+	Receiver's instance variables: 
+		subscriptions: 	a Dictionary(#mouseUp->a Set(a MorphEventSubscription) )
+
+
+MorphicEventHandler>>mouseUp:fromMorph:
+	Receiver: a MorphicEventHandler
+	Arguments and temporary variables: 
+		event: 	[(415@294) mouseUp 175555041 nil]
+		sourceMorph: 	an ImageMorph(952043776
+	Receiver's instance variables: 
+		subscriptions: 	a Dictionary(#mouseUp->a Set(a MorphEventSubscription) )
+
+
+ImageMorph(Morph)>>mouseUp:
+	Receiver: an ImageMorph(952043776)
+	Arguments and temporary variables: 
+		evt: 	[(415@294) mouseUp 175555041 nil
+	Receiver's instance variables: 
+		bounds: 	(239.0@272.0) corner: (559.0@372.0)
+		owner: 	a Morph(102308864)
+		submorphs: 	#()
+		fullBounds: 	(239.0@272.0) corner: (559.0@372.0)
+		color: 	Color blue
+		extension: 	a MorphExtension (156203264) [eventHandler = a MorphicEventHandler] ...etc...
+		image: 	Form(320x100x32)
+
+
+ImageMorph(Morph)>>handleMouseUp:
+	Receiver: an ImageMorph(952043776)
+	Arguments and temporary variables: 
+		anEvent: 	[(415@294) mouseUp 175555041 nil]
+		result: 	ni
+	Receiver's instance variables: 
+		bounds: 	(239.0@272.0) corner: (559.0@372.0)
+		owner: 	a Morph(102308864)
+		submorphs: 	#()
+		fullBounds: 	(239.0@272.0) corner: (559.0@372.0)
+		color: 	Color blue
+		extension: 	a MorphExtension (156203264) [eventHandler = a MorphicEventHandler] ...etc...
+		image: 	Form(320x100x32)
+
+
+MouseButtonEvent>>sentTo:
+	Receiver: [(415@294) mouseUp 175555041 nil]
+	Arguments and temporary variables: 
+		anObject: 	an ImageMorph(952043776
+	Receiver's instance variables: 
+		timeStamp: 	175555041
+		source: 	a HandMorph(899548672)
+		windowIndex: 	nil
+		type: 	#mouseUp
+		buttons: 	0
+		position: 	(415@294)
+		handler: 	nil
+		wasHandled: 	true
+		whichButton: 	4
+
+
+ImageMorph(Morph)>>handleEvent:
+	Receiver: an ImageMorph(952043776)
+	Arguments and temporary variables: 
+		anEvent: 	[(415@294) mouseUp 175555041 nil
+	Receiver's instance variables: 
+		bounds: 	(239.0@272.0) corner: (559.0@372.0)
+		owner: 	a Morph(102308864)
+		submorphs: 	#()
+		fullBounds: 	(239.0@272.0) corner: (559.0@372.0)
+		color: 	Color blue
+		extension: 	a MorphExtension (156203264) [eventHandler = a MorphicEventHandler] ...etc...
+		image: 	Form(320x100x32)
+
+
+ImageMorph(Morph)>>handleFocusEvent:
+	Receiver: an ImageMorph(952043776)
+	Arguments and temporary variables: 
+		anEvent: 	[(415@294) mouseUp 175555041 nil
+	Receiver's instance variables: 
+		bounds: 	(239.0@272.0) corner: (559.0@372.0)
+		owner: 	a Morph(102308864)
+		submorphs: 	#()
+		fullBounds: 	(239.0@272.0) corner: (559.0@372.0)
+		color: 	Color blue
+		extension: 	a MorphExtension (156203264) [eventHandler = a MorphicEventHandler] ...etc...
+		image: 	Form(320x100x32)
+
+
+[ ActiveHand := self.
+ActiveEvent := anEvent.
+result := focusHolder
+	handleFocusEvent: (anEvent transformedBy: (focusHolder transformedFrom: self)) ] in HandMorph>>sendFocusEvent:to:clear:
+	Receiver: a HandMorph(899548672)
+	Arguments and temporary variables: 
+		anEvent: 	[(415@294) mouseUp 175555041 nil]
+		focusHolder: 	an ImageMorph(952043776)
+		aBlock: 	[ self mouseFocus: nil ]
+		w: 	a WorldMorph(684500736) [world]
+		result: 	ni
+	Receiver's instance variables: 
+		bounds: 	(415@294.0) corner: (431@310.0)
+		owner: 	a WorldMorph(684500736) [world]
+		submorphs: 	#()
+		fullBounds: 	nil
+		color: 	Color blue
+		extension: 	a MorphExtension (629380608)
+		mouseFocus: 	nil
+		keyboardFocus: 	a SystemWindow(889037824) named: Griddlers
+		eventListeners: 	nil
+		mouseListeners: 	nil
+		mouseClickState: 	nil
+		mouseOverHandler: 	a MouseOverHandler
+		lastMouseEvent: 	[(415@294) mouseUp 175555041 nil]
+		targetOffset: 	(176.0@22.0)
+		damageRecorder: 	a DamageRecorder
+		cacheCanvas: 	nil
+		cachedCanvasHasHoles: 	false
+		temporaryCursor: 	nil
+		temporaryCursorOffset: 	nil
+		hardwareCursor: 	nil
+		hasChanged: 	true
+		savedPatch: 	nil
+		lastEventBuffer: 	#(1 175555041 415 294 0 0 1 1)
+		lastKeyScanCode: 	13
+		combinedChar: 	nil
+		captureBlock: 	nil
+		recentModifiers: 	0
+
+
+BlockClosure>>on:do:
+	Receiver: [ ActiveHand := self.
+ActiveEvent := anEvent.
+result := focusHolder
+	handleFocusEvent: (an...etc...
+	Arguments and temporary variables: 
+		exception: 	Error
+		handlerAction: 	[ :ex | 
+ActiveWorld := priorWorld.
+ActiveEvent := priorEvent.
+A...etc..
+	Receiver's instance variables: 
+		outerContext: 	HandMorph>>sendFocusEvent:to:clear:
+		startpc: 	111
+		numArgs: 	0
+
+
+WorldMorph>>becomeActiveDuring:
+	Receiver: a WorldMorph(684500736) [world]
+	Arguments and temporary variables: 
+		aBlock: 	[ ActiveHand := self.
+ActiveEvent := anEvent.
+result := focusHolder
+	ha...etc...
+		priorWorld: 	a WorldMorph(684500736) [world]
+		priorHand: 	a HandMorph(899548672)
+		priorEvent: 	[(415@294) mouseOver red 175554947 nil
+	Receiver's instance variables: 
+		bounds: 	(0@0) corner: (884@677)
+		owner: 	nil
+		submorphs: 	an Array(a TaskbarMorph(30485504) a MenubarMorph(1067345152) a Syste...etc...
+		fullBounds: 	(0@0) corner: (884@677)
+		color: 	(Color r: 0.29521016617790813 g: 0.29521016617790813 b: 0.29521016617790...etc...
+		extension: 	a MorphExtension (810071040) [other:  (dragEnabled -> true) (dropEna...etc...
+		borderWidth: 	0
+		borderColor: 	(Color r: 0.8611925708699902 g: 1.0 b: 0.7223851417399805 alpha: 1...etc...
+		backgroundMorph: 	nil
+		worldState: 	a WorldState
+		griddingOn: 	nil
+
+
+HandMorph>>sendFocusEvent:to:clear:
+	Receiver: a HandMorph(899548672)
+	Arguments and temporary variables: 
+		result: 	nil
+		anEvent: 	[(415@294) mouseUp 175555041 nil]
+		focusHolder: 	an ImageMorph(952043776)
+		aBlock: 	[ self mouseFocus: nil ]
+		w: 	a WorldMorph(684500736) [world
+	Receiver's instance variables: 
+		bounds: 	(415@294.0) corner: (431@310.0)
+		owner: 	a WorldMorph(684500736) [world]
+		submorphs: 	#()
+		fullBounds: 	nil
+		color: 	Color blue
+		extension: 	a MorphExtension (629380608)
+		mouseFocus: 	nil
+		keyboardFocus: 	a SystemWindow(889037824) named: Griddlers
+		eventListeners: 	nil
+		mouseListeners: 	nil
+		mouseClickState: 	nil
+		mouseOverHandler: 	a MouseOverHandler
+		lastMouseEvent: 	[(415@294) mouseUp 175555041 nil]
+		targetOffset: 	(176.0@22.0)
+		damageRecorder: 	a DamageRecorder
+		cacheCanvas: 	nil
+		cachedCanvasHasHoles: 	false
+		temporaryCursor: 	nil
+		temporaryCursorOffset: 	nil
+		hardwareCursor: 	nil
+		hasChanged: 	true
+		savedPatch: 	nil
+		lastEventBuffer: 	#(1 175555041 415 294 0 0 1 1)
+		lastKeyScanCode: 	13
+		combinedChar: 	nil
+		captureBlock: 	nil
+		recentModifiers: 	0
+
+
+HandMorph>>sendEvent:focus:clear:
+	Receiver: a HandMorph(899548672)
+	Arguments and temporary variables: 
+		anEvent: 	[(415@294) mouseUp 175555041 nil]
+		focusHolder: 	an ImageMorph(952043776)
+		aBlock: 	[ self mouseFocus: nil ]
+		result: 	ni
+	Receiver's instance variables: 
+		bounds: 	(415@294.0) corner: (431@310.0)
+		owner: 	a WorldMorph(684500736) [world]
+		submorphs: 	#()
+		fullBounds: 	nil
+		color: 	Color blue
+		extension: 	a MorphExtension (629380608)
+		mouseFocus: 	nil
+		keyboardFocus: 	a SystemWindow(889037824) named: Griddlers
+		eventListeners: 	nil
+		mouseListeners: 	nil
+		mouseClickState: 	nil
+		mouseOverHandler: 	a MouseOverHandler
+		lastMouseEvent: 	[(415@294) mouseUp 175555041 nil]
+		targetOffset: 	(176.0@22.0)
+		damageRecorder: 	a DamageRecorder
+		cacheCanvas: 	nil
+		cachedCanvasHasHoles: 	false
+		temporaryCursor: 	nil
+		temporaryCursorOffset: 	nil
+		hardwareCursor: 	nil
+		hasChanged: 	true
+		savedPatch: 	nil
+		lastEventBuffer: 	#(1 175555041 415 294 0 0 1 1)
+		lastKeyScanCode: 	13
+		combinedChar: 	nil
+		captureBlock: 	nil
+		recentModifiers: 	0
+
+
+HandMorph>>sendMouseEvent:
+	Receiver: a HandMorph(899548672)
+	Arguments and temporary variables: 
+		anEvent: 	[(415@294) mouseUp 175555041 nil
+	Receiver's instance variables: 
+		bounds: 	(415@294.0) corner: (431@310.0)
+		owner: 	a WorldMorph(684500736) [world]
+		submorphs: 	#()
+		fullBounds: 	nil
+		color: 	Color blue
+		extension: 	a MorphExtension (629380608)
+		mouseFocus: 	nil
+		keyboardFocus: 	a SystemWindow(889037824) named: Griddlers
+		eventListeners: 	nil
+		mouseListeners: 	nil
+		mouseClickState: 	nil
+		mouseOverHandler: 	a MouseOverHandler
+		lastMouseEvent: 	[(415@294) mouseUp 175555041 nil]
+		targetOffset: 	(176.0@22.0)
+		damageRecorder: 	a DamageRecorder
+		cacheCanvas: 	nil
+		cachedCanvasHasHoles: 	false
+		temporaryCursor: 	nil
+		temporaryCursorOffset: 	nil
+		hardwareCursor: 	nil
+		hasChanged: 	true
+		savedPatch: 	nil
+		lastEventBuffer: 	#(1 175555041 415 294 0 0 1 1)
+		lastKeyScanCode: 	13
+		combinedChar: 	nil
+		captureBlock: 	nil
+		recentModifiers: 	0
+
+
+HandMorph>>handleEvent:
+	Receiver: a HandMorph(899548672)
+	Arguments and temporary variables: 
+		anEvent: 	[(415@294) mouseUp 175555041 nil]
+		evt: 	[(415@294) mouseUp 175555041 nil
+	Receiver's instance variables: 
+		bounds: 	(415@294.0) corner: (431@310.0)
+		owner: 	a WorldMorph(684500736) [world]
+		submorphs: 	#()
+		fullBounds: 	nil
+		color: 	Color blue
+		extension: 	a MorphExtension (629380608)
+		mouseFocus: 	nil
+		keyboardFocus: 	a SystemWindow(889037824) named: Griddlers
+		eventListeners: 	nil
+		mouseListeners: 	nil
+		mouseClickState: 	nil
+		mouseOverHandler: 	a MouseOverHandler
+		lastMouseEvent: 	[(415@294) mouseUp 175555041 nil]
+		targetOffset: 	(176.0@22.0)
+		damageRecorder: 	a DamageRecorder
+		cacheCanvas: 	nil
+		cachedCanvasHasHoles: 	false
+		temporaryCursor: 	nil
+		temporaryCursorOffset: 	nil
+		hardwareCursor: 	nil
+		hasChanged: 	true
+		savedPatch: 	nil
+		lastEventBuffer: 	#(1 175555041 415 294 0 0 1 1)
+		lastKeyScanCode: 	13
+		combinedChar: 	nil
+		captureBlock: 	nil
+		recentModifiers: 	0
+
+
+HandMorph>>processEventsFromQueue:
+	Receiver: a HandMorph(899548672)
+	Arguments and temporary variables: 
+		anEventQueue: 	an InputEventSensor
+		evt: 	[(415@294) mouseUp 175555041 nil]
+		evtBuf: 	#(1 175555041 415 294 0 0 1 1)
+		type: 	1
+		hadAny: 	fals
+	Receiver's instance variables: 
+		bounds: 	(415@294.0) corner: (431@310.0)
+		owner: 	a WorldMorph(684500736) [world]
+		submorphs: 	#()
+		fullBounds: 	nil
+		color: 	Color blue
+		extension: 	a MorphExtension (629380608)
+		mouseFocus: 	nil
+		keyboardFocus: 	a SystemWindow(889037824) named: Griddlers
+		eventListeners: 	nil
+		mouseListeners: 	nil
+		mouseClickState: 	nil
+		mouseOverHandler: 	a MouseOverHandler
+		lastMouseEvent: 	[(415@294) mouseUp 175555041 nil]
+		targetOffset: 	(176.0@22.0)
+		damageRecorder: 	a DamageRecorder
+		cacheCanvas: 	nil
+		cachedCanvasHasHoles: 	false
+		temporaryCursor: 	nil
+		temporaryCursorOffset: 	nil
+		hardwareCursor: 	nil
+		hasChanged: 	true
+		savedPatch: 	nil
+		lastEventBuffer: 	#(1 175555041 415 294 0 0 1 1)
+		lastKeyScanCode: 	13
+		combinedChar: 	nil
+		captureBlock: 	nil
+		recentModifiers: 	0
+
+
+HandMorph>>processEvents
+	Receiver: a HandMorph(899548672)
+	Arguments and temporary variables: 
+
+	Receiver's instance variables: 
+		bounds: 	(415@294.0) corner: (431@310.0)
+		owner: 	a WorldMorph(684500736) [world]
+		submorphs: 	#()
+		fullBounds: 	nil
+		color: 	Color blue
+		extension: 	a MorphExtension (629380608)
+		mouseFocus: 	nil
+		keyboardFocus: 	a SystemWindow(889037824) named: Griddlers
+		eventListeners: 	nil
+		mouseListeners: 	nil
+		mouseClickState: 	nil
+		mouseOverHandler: 	a MouseOverHandler
+		lastMouseEvent: 	[(415@294) mouseUp 175555041 nil]
+		targetOffset: 	(176.0@22.0)
+		damageRecorder: 	a DamageRecorder
+		cacheCanvas: 	nil
+		cachedCanvasHasHoles: 	false
+		temporaryCursor: 	nil
+		temporaryCursorOffset: 	nil
+		hardwareCursor: 	nil
+		hasChanged: 	true
+		savedPatch: 	nil
+		lastEventBuffer: 	#(1 175555041 415 294 0 0 1 1)
+		lastKeyScanCode: 	13
+		combinedChar: 	nil
+		captureBlock: 	nil
+		recentModifiers: 	0
+
+
+[ :h | 
+self activeHand: h.
+h processEvents.
+self activeHand: nil ] in WorldState>>doOneCycleNowFor:
+	Receiver: a WorldState
+	Arguments and temporary variables: 
+		aWorld: 	a WorldMorph(684500736) [world]
+		h: 	a HandMorph(899548672
+	Receiver's instance variables: 
+		hands: 	an Array(a HandMorph(899548672))
+		damageRecorder: 	a DamageRecorder
+		stepList: 	a Heap(StepMessage(#stepAt: -> a GLMSystemWindow(690315264) named: Pl...etc...
+		lastStepTime: 	890842
+		lastStepMessage: 	nil
+		lastCycleTime: 	890879
+		alarms: 	a Heap()
+		lastAlarmTime: 	890842
+		menuBuilder: 	a PragmaMenuBuilder ( nil ) 
+		activeHand: 	a HandMorph(899548672)
+		currentCursor: 	((CursorWithMask
+	extent: (16@16)
+	depth: 1
+	fromArray: #(
+		2r0...etc...
+		worldRenderer: 	a VMWorldRenderer
+		realWindowExtent: 	(884@677)
+
+
+Array(SequenceableCollection)>>do:
+	Receiver: an Array(a HandMorph(899548672))
+	Arguments and temporary variables: 
+		aBlock: 	[ :h | 
+self activeHand: h.
+h processEvents.
+self activeHand: nil ]
+		index: 	
+	Receiver's instance variables: 
+an Array(a HandMorph(899548672))
+
+WorldState>>handsDo:
+	Receiver: a WorldState
+	Arguments and temporary variables: 
+		aBlock: 	[ :h | 
+self activeHand: h.
+h processEvents.
+self activeHand: nil 
+	Receiver's instance variables: 
+		hands: 	an Array(a HandMorph(899548672))
+		damageRecorder: 	a DamageRecorder
+		stepList: 	a Heap(StepMessage(#stepAt: -> a GLMSystemWindow(690315264) named: Pl...etc...
+		lastStepTime: 	890842
+		lastStepMessage: 	nil
+		lastCycleTime: 	890879
+		alarms: 	a Heap()
+		lastAlarmTime: 	890842
+		menuBuilder: 	a PragmaMenuBuilder ( nil ) 
+		activeHand: 	a HandMorph(899548672)
+		currentCursor: 	((CursorWithMask
+	extent: (16@16)
+	depth: 1
+	fromArray: #(
+		2r0...etc...
+		worldRenderer: 	a VMWorldRenderer
+		realWindowExtent: 	(884@677)
+
+
+WorldState>>doOneCycleNowFor:
+	Receiver: a WorldState
+	Arguments and temporary variables: 
+		aWorld: 	a WorldMorph(684500736) [world
+	Receiver's instance variables: 
+		hands: 	an Array(a HandMorph(899548672))
+		damageRecorder: 	a DamageRecorder
+		stepList: 	a Heap(StepMessage(#stepAt: -> a GLMSystemWindow(690315264) named: Pl...etc...
+		lastStepTime: 	890842
+		lastStepMessage: 	nil
+		lastCycleTime: 	890879
+		alarms: 	a Heap()
+		lastAlarmTime: 	890842
+		menuBuilder: 	a PragmaMenuBuilder ( nil ) 
+		activeHand: 	a HandMorph(899548672)
+		currentCursor: 	((CursorWithMask
+	extent: (16@16)
+	depth: 1
+	fromArray: #(
+		2r0...etc...
+		worldRenderer: 	a VMWorldRenderer
+		realWindowExtent: 	(884@677)
+
+
+WorldState>>doOneCycleFor:
+	Receiver: a WorldState
+	Arguments and temporary variables: 
+		aWorld: 	a WorldMorph(684500736) [world
+	Receiver's instance variables: 
+		hands: 	an Array(a HandMorph(899548672))
+		damageRecorder: 	a DamageRecorder
+		stepList: 	a Heap(StepMessage(#stepAt: -> a GLMSystemWindow(690315264) named: Pl...etc...
+		lastStepTime: 	890842
+		lastStepMessage: 	nil
+		lastCycleTime: 	890879
+		alarms: 	a Heap()
+		lastAlarmTime: 	890842
+		menuBuilder: 	a PragmaMenuBuilder ( nil ) 
+		activeHand: 	a HandMorph(899548672)
+		currentCursor: 	((CursorWithMask
+	extent: (16@16)
+	depth: 1
+	fromArray: #(
+		2r0...etc...
+		worldRenderer: 	a VMWorldRenderer
+		realWindowExtent: 	(884@677)
+
+
+WorldMorph>>doOneCycle
+	Receiver: a WorldMorph(684500736) [world]
+	Arguments and temporary variables: 
+
+	Receiver's instance variables: 
+		bounds: 	(0@0) corner: (884@677)
+		owner: 	nil
+		submorphs: 	an Array(a TaskbarMorph(30485504) a MenubarMorph(1067345152) a Syste...etc...
+		fullBounds: 	(0@0) corner: (884@677)
+		color: 	(Color r: 0.29521016617790813 g: 0.29521016617790813 b: 0.29521016617790...etc...
+		extension: 	a MorphExtension (810071040) [other:  (dragEnabled -> true) (dropEna...etc...
+		borderWidth: 	0
+		borderColor: 	(Color r: 0.8611925708699902 g: 1.0 b: 0.7223851417399805 alpha: 1...etc...
+		backgroundMorph: 	nil
+		worldState: 	a WorldState
+		griddingOn: 	nil
+
+
+WorldMorph class>>doOneCycle
+	Receiver: WorldMorph
+	Arguments and temporary variables: 
+
+	Receiver's instance variables: 
+		superclass: 	PasteUpMorph
+		methodDict: 	a MethodDictionary(#acceptDroppingMorph:event:->WorldMorph>>#accept...etc...
+		format: 	65547
+		layout: 	a FixedLayout
+		organization: 	a ClassOrganization
+		subclasses: 	{AthensWorldMorph. OSWindowWorldMorph}
+		name: 	#WorldMorph
+		classPool: 	a Dictionary(#AllowDropFiles->nil #CursorOwnerWorld->a WorldMorphTHERE_BE_DRAGONS_HERE
+Instance of VentanaInicio did not understand #dibujarInstrucciones
+29 November 2025 7:56:30.295628 pm
+
+VM: Win32 - X64 - 6.2 - CoInterpreter VMMaker.oscog-eem.2509 uuid: 91e81f64-95de-4914-a960-8f842be3a194 Sep 13 2019
+StackToRegisterMappingCogit VMMaker.oscog-eem.2509 uuid: 91e81f64-95de-4914-a960-8f842be3a194 Sep 13 2019
+VM: 201907031441-pharo Guille@DESKTOP-MG6660L:projects/vm7/opensmalltalk-vm Date: Wed Jul 3 16:41:39 2019 CommitHash: 4e4c5b5a0 Plugins: 201907031441-pharo Guille@DESKTOP-MG6660L:projects/vm7/opensmalltalk-vm
+
+Image: Pharo8.0.0 [Build information: Pharo-8.0.0+build.1124.sha.0932da82f08175e906b0e2a8052120c823374e9f (64 Bit)]
+
+VentanaInicio(Object)>>doesNotUnderstand: #dibujarInstrucciones
+	Receiver: a VentanaInicio
+	Arguments and temporary variables: 
+		aMessage: 	dibujarInstrucciones
+		exception: 	MessageNotUnderstood: VentanaInicio>> #dibujarInstrucciones
+		resumeValue: 	ni
+	Receiver's instance variables: 
+		mainLayout: 	a Morph(1047692800)
+		window: 	a SystemWindow(656115456) named: Griddlers
+		juego: 	a GestorDeJuego
+		jugador1: 	nil
+		jugador2: 	nil
+
+
+VentanaInicio(VentanaBase)>>redibujarVentanaCon:
+	Receiver: a VentanaInicio
+	Arguments and temporary variables: 
+		unSelectorDeMenu: 	#dibujarInstruccione
+	Receiver's instance variables: 
+		mainLayout: 	a Morph(1047692800)
+		window: 	a SystemWindow(656115456) named: Griddlers
+		juego: 	a GestorDeJuego
+		jugador1: 	nil
+		jugador2: 	nil
+
+
+VentanaInicio>>accionInstrucciones
+	Receiver: a VentanaInicio
+	Arguments and temporary variables: 
+
+	Receiver's instance variables: 
+		mainLayout: 	a Morph(1047692800)
+		window: 	a SystemWindow(656115456) named: Griddlers
+		juego: 	a GestorDeJuego
+		jugador1: 	nil
+		jugador2: 	nil
+
+
+MorphEventSubscription>>notify:from:
+	Receiver: a MorphEventSubscription
+	Arguments and temporary variables: 
+		anEvent: 	[(453@242) mouseUp 419410900 nil]
+		sourceMorph: 	an ImageMorph(169400320)
+		arity: 	
+	Receiver's instance variables: 
+		event: 	#mouseUp
+		selector: 	#accionInstrucciones
+		recipient: 	a VentanaInicio
+		valueParameter: 	nil
+
+
+[ :s | result := result | ((s notify: anEvent from: sourceMorph) == true) ] in MorphicEventHandler>>notifyMorphsOfEvent:ofType:from:
+	Receiver: a MorphicEventHandler
+	Arguments and temporary variables: 
+		anEvent: 	[(453@242) mouseUp 419410900 nil]
+		eventType: 	#mouseUp
+		sourceMorph: 	an ImageMorph(169400320)
+		result: 	false
+		s: 	a MorphEventSubscriptio
+	Receiver's instance variables: 
+		subscriptions: 	a Dictionary(#mouseUp->a Set(a MorphEventSubscription) )
+
+
+Set>>do:
+	Receiver: a Set(a MorphEventSubscription)
+	Arguments and temporary variables: 
+		aBlock: 	[ :s | result := result | ((s notify: anEvent from: sourceMorph) == tru...etc...
+		index: 	2
+		each: 	a MorphEventSubscriptio
+	Receiver's instance variables: 
+		tally: 	1
+		array: 	an Array(nil a MorphEventSubscription nil nil nil)
+
+
+MorphicEventHandler>>notifyMorphsOfEvent:ofType:from:
+	Receiver: a MorphicEventHandler
+	Arguments and temporary variables: 
+		result: 	false
+		anEvent: 	[(453@242) mouseUp 419410900 nil]
+		eventType: 	#mouseUp
+		sourceMorph: 	an ImageMorph(169400320
+	Receiver's instance variables: 
+		subscriptions: 	a Dictionary(#mouseUp->a Set(a MorphEventSubscription) )
+
+
+MorphicEventHandler>>mouseUp:fromMorph:
+	Receiver: a MorphicEventHandler
+	Arguments and temporary variables: 
+		event: 	[(453@242) mouseUp 419410900 nil]
+		sourceMorph: 	an ImageMorph(169400320
+	Receiver's instance variables: 
+		subscriptions: 	a Dictionary(#mouseUp->a Set(a MorphEventSubscription) )
+
+
+ImageMorph(Morph)>>mouseUp:
+	Receiver: an ImageMorph(169400320)
+	Arguments and temporary variables: 
+		evt: 	[(453@242) mouseUp 419410900 nil
+	Receiver's instance variables: 
+		bounds: 	(411.0@203.0) corner: (471.0@263.0)
+		owner: 	a Morph(505766400)
+		submorphs: 	#()
+		fullBounds: 	(411.0@203.0) corner: (471.0@263.0)
+		color: 	Color blue
+		extension: 	a MorphExtension (1006352384) [eventHandler = a MorphicEventHandler]...etc...
+		image: 	Form(60x60x32)
+
+
+ImageMorph(Morph)>>handleMouseUp:
+	Receiver: an ImageMorph(169400320)
+	Arguments and temporary variables: 
+		anEvent: 	[(453@242) mouseUp 419410900 nil]
+		result: 	ni
+	Receiver's instance variables: 
+		bounds: 	(411.0@203.0) corner: (471.0@263.0)
+		owner: 	a Morph(505766400)
+		submorphs: 	#()
+		fullBounds: 	(411.0@203.0) corner: (471.0@263.0)
+		color: 	Color blue
+		extension: 	a MorphExtension (1006352384) [eventHandler = a MorphicEventHandler]...etc...
+		image: 	Form(60x60x32)
+
+
+MouseButtonEvent>>sentTo:
+	Receiver: [(453@242) mouseUp 419410900 nil]
+	Arguments and temporary variables: 
+		anObject: 	an ImageMorph(169400320
+	Receiver's instance variables: 
+		timeStamp: 	419410900
+		source: 	a HandMorph(899548672)
+		windowIndex: 	nil
+		type: 	#mouseUp
+		buttons: 	0
+		position: 	(453@242)
+		handler: 	nil
+		wasHandled: 	true
+		whichButton: 	4
+
+
+ImageMorph(Morph)>>handleEvent:
+	Receiver: an ImageMorph(169400320)
+	Arguments and temporary variables: 
+		anEvent: 	[(453@242) mouseUp 419410900 nil
+	Receiver's instance variables: 
+		bounds: 	(411.0@203.0) corner: (471.0@263.0)
+		owner: 	a Morph(505766400)
+		submorphs: 	#()
+		fullBounds: 	(411.0@203.0) corner: (471.0@263.0)
+		color: 	Color blue
+		extension: 	a MorphExtension (1006352384) [eventHandler = a MorphicEventHandler]...etc...
+		image: 	Form(60x60x32)
+
+
+ImageMorph(Morph)>>handleFocusEvent:
+	Receiver: an ImageMorph(169400320)
+	Arguments and temporary variables: 
+		anEvent: 	[(453@242) mouseUp 419410900 nil
+	Receiver's instance variables: 
+		bounds: 	(411.0@203.0) corner: (471.0@263.0)
+		owner: 	a Morph(505766400)
+		submorphs: 	#()
+		fullBounds: 	(411.0@203.0) corner: (471.0@263.0)
+		color: 	Color blue
+		extension: 	a MorphExtension (1006352384) [eventHandler = a MorphicEventHandler]...etc...
+		image: 	Form(60x60x32)
+
+
+[ ActiveHand := self.
+ActiveEvent := anEvent.
+result := focusHolder
+	handleFocusEvent: (anEvent transformedBy: (focusHolder transformedFrom: self)) ] in HandMorph>>sendFocusEvent:to:clear:
+	Receiver: a HandMorph(899548672)
+	Arguments and temporary variables: 
+		anEvent: 	[(453@242) mouseUp 419410900 nil]
+		focusHolder: 	an ImageMorph(169400320)
+		aBlock: 	[ self mouseFocus: nil ]
+		w: 	a WorldMorph(684500736) [world]
+		result: 	ni
+	Receiver's instance variables: 
+		bounds: 	(453@242.0) corner: (469@258.0)
+		owner: 	a WorldMorph(684500736) [world]
+		submorphs: 	#()
+		fullBounds: 	(453@242.0) corner: (469@258.0)
+		color: 	Color blue
+		extension: 	a MorphExtension (629380608)
+		mouseFocus: 	nil
+		keyboardFocus: 	a SystemWindow(656115456) named: Griddlers
+		eventListeners: 	nil
+		mouseListeners: 	nil
+		mouseClickState: 	nil
+		mouseOverHandler: 	a MouseOverHandler
+		lastMouseEvent: 	[(453@242) mouseUp 419410900 nil]
+		targetOffset: 	(42.0@39.0)
+		damageRecorder: 	a DamageRecorder
+		cacheCanvas: 	nil
+		cachedCanvasHasHoles: 	true
+		temporaryCursor: 	nil
+		temporaryCursorOffset: 	nil
+		hardwareCursor: 	nil
+		hasChanged: 	true
+		savedPatch: 	nil
+		lastEventBuffer: 	#(1 419410900 453 242 0 0 1 1)
+		lastKeyScanCode: 	13
+		combinedChar: 	nil
+		captureBlock: 	nil
+		recentModifiers: 	0
+
+
+BlockClosure>>on:do:
+	Receiver: [ ActiveHand := self.
+ActiveEvent := anEvent.
+result := focusHolder
+	handleFocusEvent: (an...etc...
+	Arguments and temporary variables: 
+		exception: 	Error
+		handlerAction: 	[ :ex | 
+ActiveWorld := priorWorld.
+ActiveEvent := priorEvent.
+A...etc..
+	Receiver's instance variables: 
+		outerContext: 	HandMorph>>sendFocusEvent:to:clear:
+		startpc: 	111
+		numArgs: 	0
+
+
+WorldMorph>>becomeActiveDuring:
+	Receiver: a WorldMorph(684500736) [world]
+	Arguments and temporary variables: 
+		aBlock: 	[ ActiveHand := self.
+ActiveEvent := anEvent.
+result := focusHolder
+	ha...etc...
+		priorWorld: 	a WorldMorph(684500736) [world]
+		priorHand: 	a HandMorph(899548672)
+		priorEvent: 	[(453@242) mouseOver red 419410806 nil
+	Receiver's instance variables: 
+		bounds: 	(0@0) corner: (884@677)
+		owner: 	nil
+		submorphs: 	an Array(a TaskbarMorph(30485504) a MenubarMorph(1067345152) a Syste...etc...
+		fullBounds: 	(0@0) corner: (884@677)
+		color: 	(Color r: 0.29521016617790813 g: 0.29521016617790813 b: 0.29521016617790...etc...
+		extension: 	a MorphExtension (810071040) [other:  (dragEnabled -> true) (dropEna...etc...
+		borderWidth: 	0
+		borderColor: 	(Color r: 0.8611925708699902 g: 1.0 b: 0.7223851417399805 alpha: 1...etc...
+		backgroundMorph: 	nil
+		worldState: 	a WorldState
+		griddingOn: 	nil
+
+
+HandMorph>>sendFocusEvent:to:clear:
+	Receiver: a HandMorph(899548672)
+	Arguments and temporary variables: 
+		result: 	nil
+		anEvent: 	[(453@242) mouseUp 419410900 nil]
+		focusHolder: 	an ImageMorph(169400320)
+		aBlock: 	[ self mouseFocus: nil ]
+		w: 	a WorldMorph(684500736) [world
+	Receiver's instance variables: 
+		bounds: 	(453@242.0) corner: (469@258.0)
+		owner: 	a WorldMorph(684500736) [world]
+		submorphs: 	#()
+		fullBounds: 	(453@242.0) corner: (469@258.0)
+		color: 	Color blue
+		extension: 	a MorphExtension (629380608)
+		mouseFocus: 	nil
+		keyboardFocus: 	a SystemWindow(656115456) named: Griddlers
+		eventListeners: 	nil
+		mouseListeners: 	nil
+		mouseClickState: 	nil
+		mouseOverHandler: 	a MouseOverHandler
+		lastMouseEvent: 	[(453@242) mouseUp 419410900 nil]
+		targetOffset: 	(42.0@39.0)
+		damageRecorder: 	a DamageRecorder
+		cacheCanvas: 	nil
+		cachedCanvasHasHoles: 	true
+		temporaryCursor: 	nil
+		temporaryCursorOffset: 	nil
+		hardwareCursor: 	nil
+		hasChanged: 	true
+		savedPatch: 	nil
+		lastEventBuffer: 	#(1 419410900 453 242 0 0 1 1)
+		lastKeyScanCode: 	13
+		combinedChar: 	nil
+		captureBlock: 	nil
+		recentModifiers: 	0
+
+
+HandMorph>>sendEvent:focus:clear:
+	Receiver: a HandMorph(899548672)
+	Arguments and temporary variables: 
+		anEvent: 	[(453@242) mouseUp 419410900 nil]
+		focusHolder: 	an ImageMorph(169400320)
+		aBlock: 	[ self mouseFocus: nil ]
+		result: 	ni
+	Receiver's instance variables: 
+		bounds: 	(453@242.0) corner: (469@258.0)
+		owner: 	a WorldMorph(684500736) [world]
+		submorphs: 	#()
+		fullBounds: 	(453@242.0) corner: (469@258.0)
+		color: 	Color blue
+		extension: 	a MorphExtension (629380608)
+		mouseFocus: 	nil
+		keyboardFocus: 	a SystemWindow(656115456) named: Griddlers
+		eventListeners: 	nil
+		mouseListeners: 	nil
+		mouseClickState: 	nil
+		mouseOverHandler: 	a MouseOverHandler
+		lastMouseEvent: 	[(453@242) mouseUp 419410900 nil]
+		targetOffset: 	(42.0@39.0)
+		damageRecorder: 	a DamageRecorder
+		cacheCanvas: 	nil
+		cachedCanvasHasHoles: 	true
+		temporaryCursor: 	nil
+		temporaryCursorOffset: 	nil
+		hardwareCursor: 	nil
+		hasChanged: 	true
+		savedPatch: 	nil
+		lastEventBuffer: 	#(1 419410900 453 242 0 0 1 1)
+		lastKeyScanCode: 	13
+		combinedChar: 	nil
+		captureBlock: 	nil
+		recentModifiers: 	0
+
+
+HandMorph>>sendMouseEvent:
+	Receiver: a HandMorph(899548672)
+	Arguments and temporary variables: 
+		anEvent: 	[(453@242) mouseUp 419410900 nil
+	Receiver's instance variables: 
+		bounds: 	(453@242.0) corner: (469@258.0)
+		owner: 	a WorldMorph(684500736) [world]
+		submorphs: 	#()
+		fullBounds: 	(453@242.0) corner: (469@258.0)
+		color: 	Color blue
+		extension: 	a MorphExtension (629380608)
+		mouseFocus: 	nil
+		keyboardFocus: 	a SystemWindow(656115456) named: Griddlers
+		eventListeners: 	nil
+		mouseListeners: 	nil
+		mouseClickState: 	nil
+		mouseOverHandler: 	a MouseOverHandler
+		lastMouseEvent: 	[(453@242) mouseUp 419410900 nil]
+		targetOffset: 	(42.0@39.0)
+		damageRecorder: 	a DamageRecorder
+		cacheCanvas: 	nil
+		cachedCanvasHasHoles: 	true
+		temporaryCursor: 	nil
+		temporaryCursorOffset: 	nil
+		hardwareCursor: 	nil
+		hasChanged: 	true
+		savedPatch: 	nil
+		lastEventBuffer: 	#(1 419410900 453 242 0 0 1 1)
+		lastKeyScanCode: 	13
+		combinedChar: 	nil
+		captureBlock: 	nil
+		recentModifiers: 	0
+
+
+HandMorph>>handleEvent:
+	Receiver: a HandMorph(899548672)
+	Arguments and temporary variables: 
+		anEvent: 	[(453@242) mouseUp 419410900 nil]
+		evt: 	[(453@242) mouseUp 419410900 nil
+	Receiver's instance variables: 
+		bounds: 	(453@242.0) corner: (469@258.0)
+		owner: 	a WorldMorph(684500736) [world]
+		submorphs: 	#()
+		fullBounds: 	(453@242.0) corner: (469@258.0)
+		color: 	Color blue
+		extension: 	a MorphExtension (629380608)
+		mouseFocus: 	nil
+		keyboardFocus: 	a SystemWindow(656115456) named: Griddlers
+		eventListeners: 	nil
+		mouseListeners: 	nil
+		mouseClickState: 	nil
+		mouseOverHandler: 	a MouseOverHandler
+		lastMouseEvent: 	[(453@242) mouseUp 419410900 nil]
+		targetOffset: 	(42.0@39.0)
+		damageRecorder: 	a DamageRecorder
+		cacheCanvas: 	nil
+		cachedCanvasHasHoles: 	true
+		temporaryCursor: 	nil
+		temporaryCursorOffset: 	nil
+		hardwareCursor: 	nil
+		hasChanged: 	true
+		savedPatch: 	nil
+		lastEventBuffer: 	#(1 419410900 453 242 0 0 1 1)
+		lastKeyScanCode: 	13
+		combinedChar: 	nil
+		captureBlock: 	nil
+		recentModifiers: 	0
+
+
+HandMorph>>processEventsFromQueue:
+	Receiver: a HandMorph(899548672)
+	Arguments and temporary variables: 
+		anEventQueue: 	an InputEventSensor
+		evt: 	[(453@242) mouseUp 419410900 nil]
+		evtBuf: 	#(1 419410900 453 242 0 0 1 1)
+		type: 	1
+		hadAny: 	fals
+	Receiver's instance variables: 
+		bounds: 	(453@242.0) corner: (469@258.0)
+		owner: 	a WorldMorph(684500736) [world]
+		submorphs: 	#()
+		fullBounds: 	(453@242.0) corner: (469@258.0)
+		color: 	Color blue
+		extension: 	a MorphExtension (629380608)
+		mouseFocus: 	nil
+		keyboardFocus: 	a SystemWindow(656115456) named: Griddlers
+		eventListeners: 	nil
+		mouseListeners: 	nil
+		mouseClickState: 	nil
+		mouseOverHandler: 	a MouseOverHandler
+		lastMouseEvent: 	[(453@242) mouseUp 419410900 nil]
+		targetOffset: 	(42.0@39.0)
+		damageRecorder: 	a DamageRecorder
+		cacheCanvas: 	nil
+		cachedCanvasHasHoles: 	true
+		temporaryCursor: 	nil
+		temporaryCursorOffset: 	nil
+		hardwareCursor: 	nil
+		hasChanged: 	true
+		savedPatch: 	nil
+		lastEventBuffer: 	#(1 419410900 453 242 0 0 1 1)
+		lastKeyScanCode: 	13
+		combinedChar: 	nil
+		captureBlock: 	nil
+		recentModifiers: 	0
+
+
+HandMorph>>processEvents
+	Receiver: a HandMorph(899548672)
+	Arguments and temporary variables: 
+
+	Receiver's instance variables: 
+		bounds: 	(453@242.0) corner: (469@258.0)
+		owner: 	a WorldMorph(684500736) [world]
+		submorphs: 	#()
+		fullBounds: 	(453@242.0) corner: (469@258.0)
+		color: 	Color blue
+		extension: 	a MorphExtension (629380608)
+		mouseFocus: 	nil
+		keyboardFocus: 	a SystemWindow(656115456) named: Griddlers
+		eventListeners: 	nil
+		mouseListeners: 	nil
+		mouseClickState: 	nil
+		mouseOverHandler: 	a MouseOverHandler
+		lastMouseEvent: 	[(453@242) mouseUp 419410900 nil]
+		targetOffset: 	(42.0@39.0)
+		damageRecorder: 	a DamageRecorder
+		cacheCanvas: 	nil
+		cachedCanvasHasHoles: 	true
+		temporaryCursor: 	nil
+		temporaryCursorOffset: 	nil
+		hardwareCursor: 	nil
+		hasChanged: 	true
+		savedPatch: 	nil
+		lastEventBuffer: 	#(1 419410900 453 242 0 0 1 1)
+		lastKeyScanCode: 	13
+		combinedChar: 	nil
+		captureBlock: 	nil
+		recentModifiers: 	0
+
+
+[ :h | 
+self activeHand: h.
+h processEvents.
+self activeHand: nil ] in WorldState>>doOneCycleNowFor:
+	Receiver: a WorldState
+	Arguments and temporary variables: 
+		aWorld: 	a WorldMorph(684500736) [world]
+		h: 	a HandMorph(899548672
+	Receiver's instance variables: 
+		hands: 	an Array(a HandMorph(899548672))
+		damageRecorder: 	a DamageRecorder
+		stepList: 	a Heap(StepMessage(#stepAt: -> a GLMSystemWindow(690315264) named: Pl...etc...
+		lastStepTime: 	1329239
+		lastStepMessage: 	nil
+		lastCycleTime: 	1329289
+		alarms: 	a Heap()
+		lastAlarmTime: 	1329239
+		menuBuilder: 	a PragmaMenuBuilder ( nil ) 
+		activeHand: 	a HandMorph(899548672)
+		currentCursor: 	((CursorWithMask
+	extent: (16@16)
+	depth: 1
+	fromArray: #(
+		2r0...etc...
+		worldRenderer: 	a VMWorldRenderer
+		realWindowExtent: 	(884@677)
+
+
+Array(SequenceableCollection)>>do:
+	Receiver: an Array(a HandMorph(899548672))
+	Arguments and temporary variables: 
+		aBlock: 	[ :h | 
+self activeHand: h.
+h processEvents.
+self activeHand: nil ]
+		index: 	
+	Receiver's instance variables: 
+an Array(a HandMorph(899548672))
+
+WorldState>>handsDo:
+	Receiver: a WorldState
+	Arguments and temporary variables: 
+		aBlock: 	[ :h | 
+self activeHand: h.
+h processEvents.
+self activeHand: nil 
+	Receiver's instance variables: 
+		hands: 	an Array(a HandMorph(899548672))
+		damageRecorder: 	a DamageRecorder
+		stepList: 	a Heap(StepMessage(#stepAt: -> a GLMSystemWindow(690315264) named: Pl...etc...
+		lastStepTime: 	1329239
+		lastStepMessage: 	nil
+		lastCycleTime: 	1329289
+		alarms: 	a Heap()
+		lastAlarmTime: 	1329239
+		menuBuilder: 	a PragmaMenuBuilder ( nil ) 
+		activeHand: 	a HandMorph(899548672)
+		currentCursor: 	((CursorWithMask
+	extent: (16@16)
+	depth: 1
+	fromArray: #(
+		2r0...etc...
+		worldRenderer: 	a VMWorldRenderer
+		realWindowExtent: 	(884@677)
+
+
+WorldState>>doOneCycleNowFor:
+	Receiver: a WorldState
+	Arguments and temporary variables: 
+		aWorld: 	a WorldMorph(684500736) [world
+	Receiver's instance variables: 
+		hands: 	an Array(a HandMorph(899548672))
+		damageRecorder: 	a DamageRecorder
+		stepList: 	a Heap(StepMessage(#stepAt: -> a GLMSystemWindow(690315264) named: Pl...etc...
+		lastStepTime: 	1329239
+		lastStepMessage: 	nil
+		lastCycleTime: 	1329289
+		alarms: 	a Heap()
+		lastAlarmTime: 	1329239
+		menuBuilder: 	a PragmaMenuBuilder ( nil ) 
+		activeHand: 	a HandMorph(899548672)
+		currentCursor: 	((CursorWithMask
+	extent: (16@16)
+	depth: 1
+	fromArray: #(
+		2r0...etc...
+		worldRenderer: 	a VMWorldRenderer
+		realWindowExtent: 	(884@677)
+
+
+WorldState>>doOneCycleFor:
+	Receiver: a WorldState
+	Arguments and temporary variables: 
+		aWorld: 	a WorldMorph(684500736) [world
+	Receiver's instance variables: 
+		hands: 	an Array(a HandMorph(899548672))
+		damageRecorder: 	a DamageRecorder
+		stepList: 	a Heap(StepMessage(#stepAt: -> a GLMSystemWindow(690315264) named: Pl...etc...
+		lastStepTime: 	1329239
+		lastStepMessage: 	nil
+		lastCycleTime: 	1329289
+		alarms: 	a Heap()
+		lastAlarmTime: 	1329239
+		menuBuilder: 	a PragmaMenuBuilder ( nil ) 
+		activeHand: 	a HandMorph(899548672)
+		currentCursor: 	((CursorWithMask
+	extent: (16@16)
+	depth: 1
+	fromArray: #(
+		2r0...etc...
+		worldRenderer: 	a VMWorldRenderer
+		realWindowExtent: 	(884@677)
+
+
+WorldMorph>>doOneCycle
+	Receiver: a WorldMorph(684500736) [world]
+	Arguments and temporary variables: 
+
+	Receiver's instance variables: 
+		bounds: 	(0@0) corner: (884@677)
+		owner: 	nil
+		submorphs: 	an Array(a TaskbarMorph(30485504) a MenubarMorph(1067345152) a Syste...etc...
+		fullBounds: 	(0@0) corner: (884@677)
+		color: 	(Color r: 0.29521016617790813 g: 0.29521016617790813 b: 0.29521016617790...etc...
+		extension: 	a MorphExtension (810071040) [other:  (dragEnabled -> true) (dropEna...etc...
+		borderWidth: 	0
+		borderColor: 	(Color r: 0.8611925708699902 g: 1.0 b: 0.7223851417399805 alpha: 1...etc...
+		backgroundMorph: 	nil
+		worldState: 	a WorldState
+		griddingOn: 	nil
+
+
+WorldMorph class>>doOneCycle
+	Receiver: WorldMorph
+	Arguments and temporary variables: 
+
+	Receiver's instance variables: 
+		superclass: 	PasteUpMorph
+		methodDict: 	a MethodDictionary(THERE_BE_DRAGONS_HERE
+Instance of VentanaInicio did not understand #informacionInicio
+29 November 2025 8:01:52.512628 pm
+
+VM: Win32 - X64 - 6.2 - CoInterpreter VMMaker.oscog-eem.2509 uuid: 91e81f64-95de-4914-a960-8f842be3a194 Sep 13 2019
+StackToRegisterMappingCogit VMMaker.oscog-eem.2509 uuid: 91e81f64-95de-4914-a960-8f842be3a194 Sep 13 2019
+VM: 201907031441-pharo Guille@DESKTOP-MG6660L:projects/vm7/opensmalltalk-vm Date: Wed Jul 3 16:41:39 2019 CommitHash: 4e4c5b5a0 Plugins: 201907031441-pharo Guille@DESKTOP-MG6660L:projects/vm7/opensmalltalk-vm
+
+Image: Pharo8.0.0 [Build information: Pharo-8.0.0+build.1124.sha.0932da82f08175e906b0e2a8052120c823374e9f (64 Bit)]
+
+VentanaInicio(Object)>>doesNotUnderstand: #informacionInicio
+	Receiver: a VentanaInicio
+	Arguments and temporary variables: 
+		aMessage: 	informacionInicio
+		exception: 	MessageNotUnderstood: VentanaInicio>> #informacionInicio
+		resumeValue: 	ni
+	Receiver's instance variables: 
+		mainLayout: 	a Morph(867213056)
+		window: 	a SystemWindow(114001408) named: Griddlers
+		juego: 	a GestorDeJuego
+		jugador1: 	nil
+		jugador2: 	nil
+
+
+MorphEventSubscription>>notify:from:
+	Receiver: a MorphEventSubscription
+	Arguments and temporary variables: 
+		anEvent: 	[(377@201) mouseUp 419733088 nil]
+		sourceMorph: 	an ImageMorph(282346752)
+		arity: 	
+	Receiver's instance variables: 
+		event: 	#mouseUp
+		selector: 	#informacionInicio
+		recipient: 	a VentanaInicio
+		valueParameter: 	nil
+
+
+[ :s | result := result | ((s notify: anEvent from: sourceMorph) == true) ] in MorphicEventHandler>>notifyMorphsOfEvent:ofType:from:
+	Receiver: a MorphicEventHandler
+	Arguments and temporary variables: 
+		anEvent: 	[(377@201) mouseUp 419733088 nil]
+		eventType: 	#mouseUp
+		sourceMorph: 	an ImageMorph(282346752)
+		result: 	false
+		s: 	a MorphEventSubscriptio
+	Receiver's instance variables: 
+		subscriptions: 	a Dictionary(#mouseUp->a Set(a MorphEventSubscription) )
+
+
+Set>>do:
+	Receiver: a Set(a MorphEventSubscription)
+	Arguments and temporary variables: 
+		aBlock: 	[ :s | result := result | ((s notify: anEvent from: sourceMorph) == tru...etc...
+		index: 	3
+		each: 	a MorphEventSubscriptio
+	Receiver's instance variables: 
+		tally: 	1
+		array: 	an Array(nil nil a MorphEventSubscription nil nil)
+
+
+MorphicEventHandler>>notifyMorphsOfEvent:ofType:from:
+	Receiver: a MorphicEventHandler
+	Arguments and temporary variables: 
+		result: 	false
+		anEvent: 	[(377@201) mouseUp 419733088 nil]
+		eventType: 	#mouseUp
+		sourceMorph: 	an ImageMorph(282346752
+	Receiver's instance variables: 
+		subscriptions: 	a Dictionary(#mouseUp->a Set(a MorphEventSubscription) )
+
+
+MorphicEventHandler>>mouseUp:fromMorph:
+	Receiver: a MorphicEventHandler
+	Arguments and temporary variables: 
+		event: 	[(377@201) mouseUp 419733088 nil]
+		sourceMorph: 	an ImageMorph(282346752
+	Receiver's instance variables: 
+		subscriptions: 	a Dictionary(#mouseUp->a Set(a MorphEventSubscription) )
+
+
+ImageMorph(Morph)>>mouseUp:
+	Receiver: an ImageMorph(282346752)
+	Arguments and temporary variables: 
+		evt: 	[(377@201) mouseUp 419733088 nil
+	Receiver's instance variables: 
+		bounds: 	(352.0@173.0) corner: (412.0@233.0)
+		owner: 	a Morph(867213056)
+		submorphs: 	#()
+		fullBounds: 	(352.0@173.0) corner: (412.0@233.0)
+		color: 	Color blue
+		extension: 	a MorphExtension (843147008) [eventHandler = a MorphicEventHandler] ...etc...
+		image: 	Form(60x60x32)
+
+
+ImageMorph(Morph)>>handleMouseUp:
+	Receiver: an ImageMorph(282346752)
+	Arguments and temporary variables: 
+		anEvent: 	[(377@201) mouseUp 419733088 nil]
+		result: 	ni
+	Receiver's instance variables: 
+		bounds: 	(352.0@173.0) corner: (412.0@233.0)
+		owner: 	a Morph(867213056)
+		submorphs: 	#()
+		fullBounds: 	(352.0@173.0) corner: (412.0@233.0)
+		color: 	Color blue
+		extension: 	a MorphExtension (843147008) [eventHandler = a MorphicEventHandler] ...etc...
+		image: 	Form(60x60x32)
+
+
+MouseButtonEvent>>sentTo:
+	Receiver: [(377@201) mouseUp 419733088 nil]
+	Arguments and temporary variables: 
+		anObject: 	an ImageMorph(282346752
+	Receiver's instance variables: 
+		timeStamp: 	419733088
+		source: 	a HandMorph(899548672)
+		windowIndex: 	nil
+		type: 	#mouseUp
+		buttons: 	0
+		position: 	(377@201)
+		handler: 	nil
+		wasHandled: 	true
+		whichButton: 	4
+
+
+ImageMorph(Morph)>>handleEvent:
+	Receiver: an ImageMorph(282346752)
+	Arguments and temporary variables: 
+		anEvent: 	[(377@201) mouseUp 419733088 nil
+	Receiver's instance variables: 
+		bounds: 	(352.0@173.0) corner: (412.0@233.0)
+		owner: 	a Morph(867213056)
+		submorphs: 	#()
+		fullBounds: 	(352.0@173.0) corner: (412.0@233.0)
+		color: 	Color blue
+		extension: 	a MorphExtension (843147008) [eventHandler = a MorphicEventHandler] ...etc...
+		image: 	Form(60x60x32)
+
+
+ImageMorph(Morph)>>handleFocusEvent:
+	Receiver: an ImageMorph(282346752)
+	Arguments and temporary variables: 
+		anEvent: 	[(377@201) mouseUp 419733088 nil
+	Receiver's instance variables: 
+		bounds: 	(352.0@173.0) corner: (412.0@233.0)
+		owner: 	a Morph(867213056)
+		submorphs: 	#()
+		fullBounds: 	(352.0@173.0) corner: (412.0@233.0)
+		color: 	Color blue
+		extension: 	a MorphExtension (843147008) [eventHandler = a MorphicEventHandler] ...etc...
+		image: 	Form(60x60x32)
+
+
+[ ActiveHand := self.
+ActiveEvent := anEvent.
+result := focusHolder
+	handleFocusEvent: (anEvent transformedBy: (focusHolder transformedFrom: self)) ] in HandMorph>>sendFocusEvent:to:clear:
+	Receiver: a HandMorph(899548672)
+	Arguments and temporary variables: 
+		anEvent: 	[(377@201) mouseUp 419733088 nil]
+		focusHolder: 	an ImageMorph(282346752)
+		aBlock: 	[ self mouseFocus: nil ]
+		w: 	a WorldMorph(684500736) [world]
+		result: 	ni
+	Receiver's instance variables: 
+		bounds: 	(377@201.0) corner: (393@217.0)
+		owner: 	a WorldMorph(684500736) [world]
+		submorphs: 	#()
+		fullBounds: 	(377@201.0) corner: (393@217.0)
+		color: 	Color blue
+		extension: 	a MorphExtension (629380608)
+		mouseFocus: 	nil
+		keyboardFocus: 	a SystemWindow(114001408) named: Griddlers
+		eventListeners: 	nil
+		mouseListeners: 	nil
+		mouseClickState: 	nil
+		mouseOverHandler: 	a MouseOverHandler
+		lastMouseEvent: 	[(377@201) mouseUp 419733088 nil]
+		targetOffset: 	(25.0@28.0)
+		damageRecorder: 	a DamageRecorder
+		cacheCanvas: 	nil
+		cachedCanvasHasHoles: 	false
+		temporaryCursor: 	nil
+		temporaryCursorOffset: 	nil
+		hardwareCursor: 	nil
+		hasChanged: 	true
+		savedPatch: 	nil
+		lastEventBuffer: 	#(1 419733088 377 201 0 0 1 1)
+		lastKeyScanCode: 	13
+		combinedChar: 	nil
+		captureBlock: 	nil
+		recentModifiers: 	0
+
+
+BlockClosure>>on:do:
+	Receiver: [ ActiveHand := self.
+ActiveEvent := anEvent.
+result := focusHolder
+	handleFocusEvent: (an...etc...
+	Arguments and temporary variables: 
+		exception: 	Error
+		handlerAction: 	[ :ex | 
+ActiveWorld := priorWorld.
+ActiveEvent := priorEvent.
+A...etc..
+	Receiver's instance variables: 
+		outerContext: 	HandMorph>>sendFocusEvent:to:clear:
+		startpc: 	111
+		numArgs: 	0
+
+
+WorldMorph>>becomeActiveDuring:
+	Receiver: a WorldMorph(684500736) [world]
+	Arguments and temporary variables: 
+		aBlock: 	[ ActiveHand := self.
+ActiveEvent := anEvent.
+result := focusHolder
+	ha...etc...
+		priorWorld: 	a WorldMorph(684500736) [world]
+		priorHand: 	a HandMorph(899548672)
+		priorEvent: 	[(377@201) mouseOver red 419732978 nil
+	Receiver's instance variables: 
+		bounds: 	(0@0) corner: (884@677)
+		owner: 	nil
+		submorphs: 	an Array(a TaskbarMorph(30485504) a MenubarMorph(1067345152) a Syste...etc...
+		fullBounds: 	(0@0) corner: (884@677)
+		color: 	(Color r: 0.29521016617790813 g: 0.29521016617790813 b: 0.29521016617790...etc...
+		extension: 	a MorphExtension (810071040) [other:  (dragEnabled -> true) (dropEna...etc...
+		borderWidth: 	0
+		borderColor: 	(Color r: 0.8611925708699902 g: 1.0 b: 0.7223851417399805 alpha: 1...etc...
+		backgroundMorph: 	nil
+		worldState: 	a WorldState
+		griddingOn: 	nil
+
+
+HandMorph>>sendFocusEvent:to:clear:
+	Receiver: a HandMorph(899548672)
+	Arguments and temporary variables: 
+		result: 	nil
+		anEvent: 	[(377@201) mouseUp 419733088 nil]
+		focusHolder: 	an ImageMorph(282346752)
+		aBlock: 	[ self mouseFocus: nil ]
+		w: 	a WorldMorph(684500736) [world
+	Receiver's instance variables: 
+		bounds: 	(377@201.0) corner: (393@217.0)
+		owner: 	a WorldMorph(684500736) [world]
+		submorphs: 	#()
+		fullBounds: 	(377@201.0) corner: (393@217.0)
+		color: 	Color blue
+		extension: 	a MorphExtension (629380608)
+		mouseFocus: 	nil
+		keyboardFocus: 	a SystemWindow(114001408) named: Griddlers
+		eventListeners: 	nil
+		mouseListeners: 	nil
+		mouseClickState: 	nil
+		mouseOverHandler: 	a MouseOverHandler
+		lastMouseEvent: 	[(377@201) mouseUp 419733088 nil]
+		targetOffset: 	(25.0@28.0)
+		damageRecorder: 	a DamageRecorder
+		cacheCanvas: 	nil
+		cachedCanvasHasHoles: 	false
+		temporaryCursor: 	nil
+		temporaryCursorOffset: 	nil
+		hardwareCursor: 	nil
+		hasChanged: 	true
+		savedPatch: 	nil
+		lastEventBuffer: 	#(1 419733088 377 201 0 0 1 1)
+		lastKeyScanCode: 	13
+		combinedChar: 	nil
+		captureBlock: 	nil
+		recentModifiers: 	0
+
+
+HandMorph>>sendEvent:focus:clear:
+	Receiver: a HandMorph(899548672)
+	Arguments and temporary variables: 
+		anEvent: 	[(377@201) mouseUp 419733088 nil]
+		focusHolder: 	an ImageMorph(282346752)
+		aBlock: 	[ self mouseFocus: nil ]
+		result: 	ni
+	Receiver's instance variables: 
+		bounds: 	(377@201.0) corner: (393@217.0)
+		owner: 	a WorldMorph(684500736) [world]
+		submorphs: 	#()
+		fullBounds: 	(377@201.0) corner: (393@217.0)
+		color: 	Color blue
+		extension: 	a MorphExtension (629380608)
+		mouseFocus: 	nil
+		keyboardFocus: 	a SystemWindow(114001408) named: Griddlers
+		eventListeners: 	nil
+		mouseListeners: 	nil
+		mouseClickState: 	nil
+		mouseOverHandler: 	a MouseOverHandler
+		lastMouseEvent: 	[(377@201) mouseUp 419733088 nil]
+		targetOffset: 	(25.0@28.0)
+		damageRecorder: 	a DamageRecorder
+		cacheCanvas: 	nil
+		cachedCanvasHasHoles: 	false
+		temporaryCursor: 	nil
+		temporaryCursorOffset: 	nil
+		hardwareCursor: 	nil
+		hasChanged: 	true
+		savedPatch: 	nil
+		lastEventBuffer: 	#(1 419733088 377 201 0 0 1 1)
+		lastKeyScanCode: 	13
+		combinedChar: 	nil
+		captureBlock: 	nil
+		recentModifiers: 	0
+
+
+HandMorph>>sendMouseEvent:
+	Receiver: a HandMorph(899548672)
+	Arguments and temporary variables: 
+		anEvent: 	[(377@201) mouseUp 419733088 nil
+	Receiver's instance variables: 
+		bounds: 	(377@201.0) corner: (393@217.0)
+		owner: 	a WorldMorph(684500736) [world]
+		submorphs: 	#()
+		fullBounds: 	(377@201.0) corner: (393@217.0)
+		color: 	Color blue
+		extension: 	a MorphExtension (629380608)
+		mouseFocus: 	nil
+		keyboardFocus: 	a SystemWindow(114001408) named: Griddlers
+		eventListeners: 	nil
+		mouseListeners: 	nil
+		mouseClickState: 	nil
+		mouseOverHandler: 	a MouseOverHandler
+		lastMouseEvent: 	[(377@201) mouseUp 419733088 nil]
+		targetOffset: 	(25.0@28.0)
+		damageRecorder: 	a DamageRecorder
+		cacheCanvas: 	nil
+		cachedCanvasHasHoles: 	false
+		temporaryCursor: 	nil
+		temporaryCursorOffset: 	nil
+		hardwareCursor: 	nil
+		hasChanged: 	true
+		savedPatch: 	nil
+		lastEventBuffer: 	#(1 419733088 377 201 0 0 1 1)
+		lastKeyScanCode: 	13
+		combinedChar: 	nil
+		captureBlock: 	nil
+		recentModifiers: 	0
+
+
+HandMorph>>handleEvent:
+	Receiver: a HandMorph(899548672)
+	Arguments and temporary variables: 
+		anEvent: 	[(377@201) mouseUp 419733088 nil]
+		evt: 	[(377@201) mouseUp 419733088 nil
+	Receiver's instance variables: 
+		bounds: 	(377@201.0) corner: (393@217.0)
+		owner: 	a WorldMorph(684500736) [world]
+		submorphs: 	#()
+		fullBounds: 	(377@201.0) corner: (393@217.0)
+		color: 	Color blue
+		extension: 	a MorphExtension (629380608)
+		mouseFocus: 	nil
+		keyboardFocus: 	a SystemWindow(114001408) named: Griddlers
+		eventListeners: 	nil
+		mouseListeners: 	nil
+		mouseClickState: 	nil
+		mouseOverHandler: 	a MouseOverHandler
+		lastMouseEvent: 	[(377@201) mouseUp 419733088 nil]
+		targetOffset: 	(25.0@28.0)
+		damageRecorder: 	a DamageRecorder
+		cacheCanvas: 	nil
+		cachedCanvasHasHoles: 	false
+		temporaryCursor: 	nil
+		temporaryCursorOffset: 	nil
+		hardwareCursor: 	nil
+		hasChanged: 	true
+		savedPatch: 	nil
+		lastEventBuffer: 	#(1 419733088 377 201 0 0 1 1)
+		lastKeyScanCode: 	13
+		combinedChar: 	nil
+		captureBlock: 	nil
+		recentModifiers: 	0
+
+
+HandMorph>>processEventsFromQueue:
+	Receiver: a HandMorph(899548672)
+	Arguments and temporary variables: 
+		anEventQueue: 	an InputEventSensor
+		evt: 	[(377@201) mouseUp 419733088 nil]
+		evtBuf: 	#(1 419733088 377 201 0 0 1 1)
+		type: 	1
+		hadAny: 	fals
+	Receiver's instance variables: 
+		bounds: 	(377@201.0) corner: (393@217.0)
+		owner: 	a WorldMorph(684500736) [world]
+		submorphs: 	#()
+		fullBounds: 	(377@201.0) corner: (393@217.0)
+		color: 	Color blue
+		extension: 	a MorphExtension (629380608)
+		mouseFocus: 	nil
+		keyboardFocus: 	a SystemWindow(114001408) named: Griddlers
+		eventListeners: 	nil
+		mouseListeners: 	nil
+		mouseClickState: 	nil
+		mouseOverHandler: 	a MouseOverHandler
+		lastMouseEvent: 	[(377@201) mouseUp 419733088 nil]
+		targetOffset: 	(25.0@28.0)
+		damageRecorder: 	a DamageRecorder
+		cacheCanvas: 	nil
+		cachedCanvasHasHoles: 	false
+		temporaryCursor: 	nil
+		temporaryCursorOffset: 	nil
+		hardwareCursor: 	nil
+		hasChanged: 	true
+		savedPatch: 	nil
+		lastEventBuffer: 	#(1 419733088 377 201 0 0 1 1)
+		lastKeyScanCode: 	13
+		combinedChar: 	nil
+		captureBlock: 	nil
+		recentModifiers: 	0
+
+
+HandMorph>>processEvents
+	Receiver: a HandMorph(899548672)
+	Arguments and temporary variables: 
+
+	Receiver's instance variables: 
+		bounds: 	(377@201.0) corner: (393@217.0)
+		owner: 	a WorldMorph(684500736) [world]
+		submorphs: 	#()
+		fullBounds: 	(377@201.0) corner: (393@217.0)
+		color: 	Color blue
+		extension: 	a MorphExtension (629380608)
+		mouseFocus: 	nil
+		keyboardFocus: 	a SystemWindow(114001408) named: Griddlers
+		eventListeners: 	nil
+		mouseListeners: 	nil
+		mouseClickState: 	nil
+		mouseOverHandler: 	a MouseOverHandler
+		lastMouseEvent: 	[(377@201) mouseUp 419733088 nil]
+		targetOffset: 	(25.0@28.0)
+		damageRecorder: 	a DamageRecorder
+		cacheCanvas: 	nil
+		cachedCanvasHasHoles: 	false
+		temporaryCursor: 	nil
+		temporaryCursorOffset: 	nil
+		hardwareCursor: 	nil
+		hasChanged: 	true
+		savedPatch: 	nil
+		lastEventBuffer: 	#(1 419733088 377 201 0 0 1 1)
+		lastKeyScanCode: 	13
+		combinedChar: 	nil
+		captureBlock: 	nil
+		recentModifiers: 	0
+
+
+[ :h | 
+self activeHand: h.
+h processEvents.
+self activeHand: nil ] in WorldState>>doOneCycleNowFor:
+	Receiver: a WorldState
+	Arguments and temporary variables: 
+		aWorld: 	a WorldMorph(684500736) [world]
+		h: 	a HandMorph(899548672
+	Receiver's instance variables: 
+		hands: 	an Array(a HandMorph(899548672))
+		damageRecorder: 	a DamageRecorder
+		stepList: 	a Heap(StepMessage(#stepAt: -> a GLMSystemWindow(690315264) named: Pl...etc...
+		lastStepTime: 	1651463
+		lastStepMessage: 	nil
+		lastCycleTime: 	1651522
+		alarms: 	a Heap()
+		lastAlarmTime: 	1651463
+		menuBuilder: 	a PragmaMenuBuilder ( nil ) 
+		activeHand: 	a HandMorph(899548672)
+		currentCursor: 	((CursorWithMask
+	extent: (16@16)
+	depth: 1
+	fromArray: #(
+		2r0...etc...
+		worldRenderer: 	a VMWorldRenderer
+		realWindowExtent: 	(884@677)
+
+
+Array(SequenceableCollection)>>do:
+	Receiver: an Array(a HandMorph(899548672))
+	Arguments and temporary variables: 
+		aBlock: 	[ :h | 
+self activeHand: h.
+h processEvents.
+self activeHand: nil ]
+		index: 	
+	Receiver's instance variables: 
+an Array(a HandMorph(899548672))
+
+WorldState>>handsDo:
+	Receiver: a WorldState
+	Arguments and temporary variables: 
+		aBlock: 	[ :h | 
+self activeHand: h.
+h processEvents.
+self activeHand: nil 
+	Receiver's instance variables: 
+		hands: 	an Array(a HandMorph(899548672))
+		damageRecorder: 	a DamageRecorder
+		stepList: 	a Heap(StepMessage(#stepAt: -> a GLMSystemWindow(690315264) named: Pl...etc...
+		lastStepTime: 	1651463
+		lastStepMessage: 	nil
+		lastCycleTime: 	1651522
+		alarms: 	a Heap()
+		lastAlarmTime: 	1651463
+		menuBuilder: 	a PragmaMenuBuilder ( nil ) 
+		activeHand: 	a HandMorph(899548672)
+		currentCursor: 	((CursorWithMask
+	extent: (16@16)
+	depth: 1
+	fromArray: #(
+		2r0...etc...
+		worldRenderer: 	a VMWorldRenderer
+		realWindowExtent: 	(884@677)
+
+
+WorldState>>doOneCycleNowFor:
+	Receiver: a WorldState
+	Arguments and temporary variables: 
+		aWorld: 	a WorldMorph(684500736) [world
+	Receiver's instance variables: 
+		hands: 	an Array(a HandMorph(899548672))
+		damageRecorder: 	a DamageRecorder
+		stepList: 	a Heap(StepMessage(#stepAt: -> a GLMSystemWindow(690315264) named: Pl...etc...
+		lastStepTime: 	1651463
+		lastStepMessage: 	nil
+		lastCycleTime: 	1651522
+		alarms: 	a Heap()
+		lastAlarmTime: 	1651463
+		menuBuilder: 	a PragmaMenuBuilder ( nil ) 
+		activeHand: 	a HandMorph(899548672)
+		currentCursor: 	((CursorWithMask
+	extent: (16@16)
+	depth: 1
+	fromArray: #(
+		2r0...etc...
+		worldRenderer: 	a VMWorldRenderer
+		realWindowExtent: 	(884@677)
+
+
+WorldState>>doOneCycleFor:
+	Receiver: a WorldState
+	Arguments and temporary variables: 
+		aWorld: 	a WorldMorph(684500736) [world
+	Receiver's instance variables: 
+		hands: 	an Array(a HandMorph(899548672))
+		damageRecorder: 	a DamageRecorder
+		stepList: 	a Heap(StepMessage(#stepAt: -> a GLMSystemWindow(690315264) named: Pl...etc...
+		lastStepTime: 	1651463
+		lastStepMessage: 	nil
+		lastCycleTime: 	1651522
+		alarms: 	a Heap()
+		lastAlarmTime: 	1651463
+		menuBuilder: 	a PragmaMenuBuilder ( nil ) 
+		activeHand: 	a HandMorph(899548672)
+		currentCursor: 	((CursorWithMask
+	extent: (16@16)
+	depth: 1
+	fromArray: #(
+		2r0...etc...
+		worldRenderer: 	a VMWorldRenderer
+		realWindowExtent: 	(884@677)
+
+
+WorldMorph>>doOneCycle
+	Receiver: a WorldMorph(684500736) [world]
+	Arguments and temporary variables: 
+
+	Receiver's instance variables: 
+		bounds: 	(0@0) corner: (884@677)
+		owner: 	nil
+		submorphs: 	an Array(a TaskbarMorph(30485504) a MenubarMorph(1067345152) a Syste...etc...
+		fullBounds: 	(0@0) corner: (884@677)
+		color: 	(Color r: 0.29521016617790813 g: 0.29521016617790813 b: 0.29521016617790...etc...
+		extension: 	a MorphExtension (810071040) [other:  (dragEnabled -> true) (dropEna...etc...
+		borderWidth: 	0
+		borderColor: 	(Color r: 0.8611925708699902 g: 1.0 b: 0.7223851417399805 alpha: 1...etc...
+		backgroundMorph: 	nil
+		worldState: 	a WorldState
+		griddingOn: 	nil
+
+
+WorldMorph class>>doOneCycle
+	Receiver: WorldMorph
+	Arguments and temporary variables: 
+
+	Receiver's instance variables: 
+		superclass: 	PasteUpMorph
+		methodDict: 	a MethodDictionary(#acceptDroppingMorph:event:->WorldMorph>>#accept...etc...
+		format: 	65547
+		layout: 	a FixedLayout
+		organization: 	a ClassOrganization
+		subclasses: 	{AthensWorldMorph. OSWindowWorldMorph}
+		name: 	#WorldMorph
+		classPool: 	a Dictionary(#AllowDropFiles->nil #CursorOwnerWorld->a WorldMorph(68...etc...
+		sharedPools: 	an OrderedCollection()
+		environment: 	a SystemDictionary(lots of globals)
+		category: 	#'Morphic-Core-Worlds'
+		announcer: 	nil
+		displayScaleFactor: 	1
+
+
+[ [ WorldMorph doOneCycle.
+Processor yield.
+false ] whileFalse: [  ] ] in MorphicUIManager>>spawnNewProcess
+	Receiver: a MorphicUIManager
+	Arguments and temporary variables: 
+
+	Receiver's instance variables: 
+		activeTranscript: 	nil
+
+
+[ self value.
+Processor terminateActive ] in BlockClosure>>newProcess
+	Receiver: [ [ WorldMorph doOneCycle.
+Processor yield.
+false ] whileFalse: [  ] ]
+	Arguments and temporary variables: 
+
+	Receiver's instance variables: 
+		outerContext: 	MorphicUIManager>>spawnNewProcess
+		startpc: 	125
+		numArgs: 	0
+
+
+
+--- The full stack ---
+VentanaInicio(Object)>>doesNotUnderstand: #informacionInicio
+MorphEventSubscription>>notify:from:
+[ :s | result := result | ((s notify: anEvent from: sourceMorph) == true) ] in MorphicEventHandler>>notifyMorphsOfEvent:ofType:from:
+Set>>do:
+MorphicEventHandler>>notifyMorphsOfEvent:ofType:from:
+MorphicEventHandler>>mouseUp:fromMorph:
+ImageMorph(Morph)>>mouseUp:
+ImageMorph(Morph)>>handleMouseUp:
+MouseButtonEvent>>sentTo:
+ImageMorph(Morph)>>handleEvent:
+ImageMorph(Morph)>>handleFocusEvent:
+[ ActiveHand := self.
+ActiveEvent := anEvent.
+result := focusHolder
+	handleFocusEvent: (anEvent transformedBy: (focusHolder transformedFrom: self)) ] in HandMorph>>sendFocusEvent:to:clear:
+BlockClosure>>on:do:
+WorldMorph>>becomeActiveDuring:
+HandMorph>>sendFocusEvent:to:clear:
+HandMorph>>sendEvent:focus:clear:
+HandMorph>>sendMouseEvent:
+HandMorph>>handleEvent:
+HandMorph>>processEventsFromQueue:
+HandMorph>>processEvents
+[ :h | 
+self activeHand: h.
+h processEvents.
+self activeHand: nil ] in WorldState>>doOneCycleNowFor:
+Array(SequenceableCollection)>>do:
+WorldState>>handsDo:
+WorldState>>doOneCycleNowFor:
+WorldState>>doOneCycleFor:
+WorldMorph>>doOneCycle
+WorldMorph class>>doOneCycle
+[ [ WorldMorph doOneCycle.
+Processor yield.
+false ] whileFalse: [  ] ] in MorphicUIManager>>spawnNewProcess
+[ self value.
+Processor terminateActive ] in BlockClosure>>newProcess
+-------------------------------------------------------------------------------
+
+THERE_BE_DRAGONS_HERE
+Instance of VentanaInicio did not understand #informacionInicio
+29 November 2025 8:02:00.054628 pm
+
+VM: Win32 - X64 - 6.2 - CoInterpreter VMMaker.oscog-eem.2509 uuid: 91e81f64-95de-4914-a960-8f842be3a194 Sep 13 2019
+StackToRegisterMappingCogit VMMaker.oscog-eem.2509 uuid: 91e81f64-95de-4914-a960-8f842be3a194 Sep 13 2019
+VM: 201907031441-pharo Guille@DESKTOP-MG6660L:projects/vm7/opensmalltalk-vm Date: Wed Jul 3 16:41:39 2019 CommitHash: 4e4c5b5a0 Plugins: 201907031441-pharo Guille@DESKTOP-MG6660L:projects/vm7/opensmalltalk-vm
+
+Image: Pharo8.0.0 [Build information: Pharo-8.0.0+build.1124.sha.0932da82f08175e906b0e2a8052120c823374e9f (64 Bit)]
+
+VentanaInicio(Object)>>doesNotUnderstand: #informacionInicio
+	Receiver: a VentanaInicio
+	Arguments and temporary variables: 
+		aMessage: 	informacionInicio
+		exception: 	MessageNotUnderstood: VentanaInicio>> #informacionInicio
+		resumeValue: 	ni
+	Receiver's instance variables: 
+		mainLayout: 	a Morph(867213056)
+		window: 	a SystemWindow(114001408) named: Griddlers
+		juego: 	a GestorDeJuego
+		jugador1: 	nil
+		jugador2: 	nil
+
+
+MorphEventSubscription>>notify:from:
+	Receiver: a MorphEventSubscription
+	Arguments and temporary variables: 
+		anEvent: 	[(410@209) mouseUp 419740681 nil]
+		sourceMorph: 	an ImageMorph(282346752)
+		arity: 	
+	Receiver's instance variables: 
+		event: 	#mouseUp
+		selector: 	#informacionInicio
+		recipient: 	a VentanaInicio
+		valueParameter: 	nil
+
+
+[ :s | result := result | ((s notify: anEvent from: sourceMorph) == true) ] in MorphicEventHandler>>notifyMorphsOfEvent:ofType:from:
+	Receiver: a MorphicEventHandler
+	Arguments and temporary variables: 
+		anEvent: 	[(410@209) mouseUp 419740681 nil]
+		eventType: 	#mouseUp
+		sourceMorph: 	an ImageMorph(282346752)
+		result: 	false
+		s: 	a MorphEventSubscriptio
+	Receiver's instance variables: 
+		subscriptions: 	a Dictionary(#mouseUp->a Set(a MorphEventSubscription) )
+
+
+Set>>do:
+	Receiver: a Set(a MorphEventSubscription)
+	Arguments and temporary variables: 
+		aBlock: 	[ :s | result := result | ((s notify: anEvent from: sourceMorph) == tru...etc...
+		index: 	3
+		each: 	a MorphEventSubscriptio
+	Receiver's instance variables: 
+		tally: 	1
+		array: 	an Array(nil nil a MorphEventSubscription nil nil)
+
+
+MorphicEventHandler>>notifyMorphsOfEvent:ofType:from:
+	Receiver: a MorphicEventHandler
+	Arguments and temporary variables: 
+		result: 	false
+		anEvent: 	[(410@209) mouseUp 419740681 nil]
+		eventType: 	#mouseUp
+		sourceMorph: 	an ImageMorph(282346752
+	Receiver's instance variables: 
+		subscriptions: 	a Dictionary(#mouseUp->a Set(a MorphEventSubscription) )
+
+
+MorphicEventHandler>>mouseUp:fromMorph:
+	Receiver: a MorphicEventHandler
+	Arguments and temporary variables: 
+		event: 	[(410@209) mouseUp 419740681 nil]
+		sourceMorph: 	an ImageMorph(282346752
+	Receiver's instance variables: 
+		subscriptions: 	a Dictionary(#mouseUp->a Set(a MorphEventSubscription) )
+
+
+ImageMorph(Morph)>>mouseUp:
+	Receiver: an ImageMorph(282346752)
+	Arguments and temporary variables: 
+		evt: 	[(410@209) mouseUp 419740681 nil
+	Receiver's instance variables: 
+		bounds: 	(352.0@173.0) corner: (412.0@233.0)
+		owner: 	a Morph(867213056)
+		submorphs: 	#()
+		fullBounds: 	(352.0@173.0) corner: (412.0@233.0)
+		color: 	Color blue
+		extension: 	a MorphExtension (843147008) [eventHandler = a MorphicEventHandler] ...etc...
+		image: 	Form(60x60x32)
+
+
+ImageMorph(Morph)>>handleMouseUp:
+	Receiver: an ImageMorph(282346752)
+	Arguments and temporary variables: 
+		anEvent: 	[(410@209) mouseUp 419740681 nil]
+		result: 	ni
+	Receiver's instance variables: 
+		bounds: 	(352.0@173.0) corner: (412.0@233.0)
+		owner: 	a Morph(867213056)
+		submorphs: 	#()
+		fullBounds: 	(352.0@173.0) corner: (412.0@233.0)
+		color: 	Color blue
+		extension: 	a MorphExtension (843147008) [eventHandler = a MorphicEventHandler] ...etc...
+		image: 	Form(60x60x32)
+
+
+MouseButtonEvent>>sentTo:
+	Receiver: [(410@209) mouseUp 419740681 nil]
+	Arguments and temporary variables: 
+		anObject: 	an ImageMorph(282346752
+	Receiver's instance variables: 
+		timeStamp: 	419740681
+		source: 	a HandMorph(899548672)
+		windowIndex: 	nil
+		type: 	#mouseUp
+		buttons: 	0
+		position: 	(410@209)
+		handler: 	nil
+		wasHandled: 	true
+		whichButton: 	4
+
+
+ImageMorph(Morph)>>handleEvent:
+	Receiver: an ImageMorph(282346752)
+	Arguments and temporary variables: 
+		anEvent: 	[(410@209) mouseUp 419740681 nil
+	Receiver's instance variables: 
+		bounds: 	(352.0@173.0) corner: (412.0@233.0)
+		owner: 	a Morph(867213056)
+		submorphs: 	#()
+		fullBounds: 	(352.0@173.0) corner: (412.0@233.0)
+		color: 	Color blue
+		extension: 	a MorphExtension (843147008) [eventHandler = a MorphicEventHandler] ...etc...
+		image: 	Form(60x60x32)
+
+
+ImageMorph(Morph)>>handleFocusEvent:
+	Receiver: an ImageMorph(282346752)
+	Arguments and temporary variables: 
+		anEvent: 	[(410@209) mouseUp 419740681 nil
+	Receiver's instance variables: 
+		bounds: 	(352.0@173.0) corner: (412.0@233.0)
+		owner: 	a Morph(867213056)
+		submorphs: 	#()
+		fullBounds: 	(352.0@173.0) corner: (412.0@233.0)
+		color: 	Color blue
+		extension: 	a MorphExtension (843147008) [eventHandler = a MorphicEventHandler] ...etc...
+		image: 	Form(60x60x32)
+
+
+[ ActiveHand := self.
+ActiveEvent := anEvent.
+result := focusHolder
+	handleFocusEvent: (anEvent transformedBy: (focusHolder transformedFrom: self)) ] in HandMorph>>sendFocusEvent:to:clear:
+	Receiver: a HandMorph(899548672)
+	Arguments and temporary variables: 
+		anEvent: 	[(410@209) mouseUp 419740681 nil]
+		focusHolder: 	an ImageMorph(282346752)
+		aBlock: 	[ self mouseFocus: nil ]
+		w: 	a WorldMorph(684500736) [world]
+		result: 	ni
+	Receiver's instance variables: 
+		bounds: 	(410@209.0) corner: (426@225.0)
+		owner: 	a WorldMorph(684500736) [world]
+		submorphs: 	#()
+		fullBounds: 	(410@209.0) corner: (426@225.0)
+		color: 	Color blue
+		extension: 	a MorphExtension (629380608)
+		mouseFocus: 	nil
+		keyboardFocus: 	a SystemWindow(114001408) named: Griddlers
+		eventListeners: 	nil
+		mouseListeners: 	nil
+		mouseClickState: 	nil
+		mouseOverHandler: 	a MouseOverHandler
+		lastMouseEvent: 	[(410@209) mouseUp 419740681 nil]
+		targetOffset: 	(58.0@36.0)
+		damageRecorder: 	a DamageRecorder
+		cacheCanvas: 	nil
+		cachedCanvasHasHoles: 	false
+		temporaryCursor: 	nil
+		temporaryCursorOffset: 	nil
+		hardwareCursor: 	nil
+		hasChanged: 	true
+		savedPatch: 	nil
+		lastEventBuffer: 	#(1 419740681 410 209 0 0 1 1)
+		lastKeyScanCode: 	13
+		combinedChar: 	nil
+		captureBlock: 	nil
+		recentModifiers: 	0
+
+
+BlockClosure>>on:do:
+	Receiver: [ ActiveHand := self.
+ActiveEvent := anEvent.
+result := focusHolder
+	handleFocusEvent: (an...etc...
+	Arguments and temporary variables: 
+		exception: 	Error
+		handlerAction: 	[ :ex | 
+ActiveWorld := priorWorld.
+ActiveEvent := priorEvent.
+A...etc..
+	Receiver's instance variables: 
+		outerContext: 	HandMorph>>sendFocusEvent:to:clear:
+		startpc: 	111
+		numArgs: 	0
+
+
+WorldMorph>>becomeActiveDuring:
+	Receiver: a WorldMorph(684500736) [world]
+	Arguments and temporary variables: 
+		aBlock: 	[ ActiveHand := self.
+ActiveEvent := anEvent.
+result := focusHolder
+	ha...etc...
+		priorWorld: 	a WorldMorph(684500736) [world]
+		priorHand: 	a HandMorph(899548672)
+		priorEvent: 	[(410@209) mouseOver red 419740556 nil
+	Receiver's instance variables: 
+		bounds: 	(0@0) corner: (884@677)
+		owner: 	nil
+		submorphs: 	an Array(a TaskbarMorph(30485504) a MenubarMorph(1067345152) a Syste...etc...
+		fullBounds: 	(0@0) corner: (884@677)
+		color: 	(Color r: 0.29521016617790813 g: 0.29521016617790813 b: 0.29521016617790...etc...
+		extension: 	a MorphExtension (810071040) [other:  (dragEnabled -> true) (dropEna...etc...
+		borderWidth: 	0
+		borderColor: 	(Color r: 0.8611925708699902 g: 1.0 b: 0.7223851417399805 alpha: 1...etc...
+		backgroundMorph: 	nil
+		worldState: 	a WorldState
+		griddingOn: 	nil
+
+
+HandMorph>>sendFocusEvent:to:clear:
+	Receiver: a HandMorph(899548672)
+	Arguments and temporary variables: 
+		result: 	nil
+		anEvent: 	[(410@209) mouseUp 419740681 nil]
+		focusHolder: 	an ImageMorph(282346752)
+		aBlock: 	[ self mouseFocus: nil ]
+		w: 	a WorldMorph(684500736) [world
+	Receiver's instance variables: 
+		bounds: 	(410@209.0) corner: (426@225.0)
+		owner: 	a WorldMorph(684500736) [world]
+		submorphs: 	#()
+		fullBounds: 	(410@209.0) corner: (426@225.0)
+		color: 	Color blue
+		extension: 	a MorphExtension (629380608)
+		mouseFocus: 	nil
+		keyboardFocus: 	a SystemWindow(114001408) named: Griddlers
+		eventListeners: 	nil
+		mouseListeners: 	nil
+		mouseClickState: 	nil
+		mouseOverHandler: 	a MouseOverHandler
+		lastMouseEvent: 	[(410@209) mouseUp 419740681 nil]
+		targetOffset: 	(58.0@36.0)
+		damageRecorder: 	a DamageRecorder
+		cacheCanvas: 	nil
+		cachedCanvasHasHoles: 	false
+		temporaryCursor: 	nil
+		temporaryCursorOffset: 	nil
+		hardwareCursor: 	nil
+		hasChanged: 	true
+		savedPatch: 	nil
+		lastEventBuffer: 	#(1 419740681 410 209 0 0 1 1)
+		lastKeyScanCode: 	13
+		combinedChar: 	nil
+		captureBlock: 	nil
+		recentModifiers: 	0
+
+
+HandMorph>>sendEvent:focus:clear:
+	Receiver: a HandMorph(899548672)
+	Arguments and temporary variables: 
+		anEvent: 	[(410@209) mouseUp 419740681 nil]
+		focusHolder: 	an ImageMorph(282346752)
+		aBlock: 	[ self mouseFocus: nil ]
+		result: 	ni
+	Receiver's instance variables: 
+		bounds: 	(410@209.0) corner: (426@225.0)
+		owner: 	a WorldMorph(684500736) [world]
+		submorphs: 	#()
+		fullBounds: 	(410@209.0) corner: (426@225.0)
+		color: 	Color blue
+		extension: 	a MorphExtension (629380608)
+		mouseFocus: 	nil
+		keyboardFocus: 	a SystemWindow(114001408) named: Griddlers
+		eventListeners: 	nil
+		mouseListeners: 	nil
+		mouseClickState: 	nil
+		mouseOverHandler: 	a MouseOverHandler
+		lastMouseEvent: 	[(410@209) mouseUp 419740681 nil]
+		targetOffset: 	(58.0@36.0)
+		damageRecorder: 	a DamageRecorder
+		cacheCanvas: 	nil
+		cachedCanvasHasHoles: 	false
+		temporaryCursor: 	nil
+		temporaryCursorOffset: 	nil
+		hardwareCursor: 	nil
+		hasChanged: 	true
+		savedPatch: 	nil
+		lastEventBuffer: 	#(1 419740681 410 209 0 0 1 1)
+		lastKeyScanCode: 	13
+		combinedChar: 	nil
+		captureBlock: 	nil
+		recentModifiers: 	0
+
+
+HandMorph>>sendMouseEvent:
+	Receiver: a HandMorph(899548672)
+	Arguments and temporary variables: 
+		anEvent: 	[(410@209) mouseUp 419740681 nil
+	Receiver's instance variables: 
+		bounds: 	(410@209.0) corner: (426@225.0)
+		owner: 	a WorldMorph(684500736) [world]
+		submorphs: 	#()
+		fullBounds: 	(410@209.0) corner: (426@225.0)
+		color: 	Color blue
+		extension: 	a MorphExtension (629380608)
+		mouseFocus: 	nil
+		keyboardFocus: 	a SystemWindow(114001408) named: Griddlers
+		eventListeners: 	nil
+		mouseListeners: 	nil
+		mouseClickState: 	nil
+		mouseOverHandler: 	a MouseOverHandler
+		lastMouseEvent: 	[(410@209) mouseUp 419740681 nil]
+		targetOffset: 	(58.0@36.0)
+		damageRecorder: 	a DamageRecorder
+		cacheCanvas: 	nil
+		cachedCanvasHasHoles: 	false
+		temporaryCursor: 	nil
+		temporaryCursorOffset: 	nil
+		hardwareCursor: 	nil
+		hasChanged: 	true
+		savedPatch: 	nil
+		lastEventBuffer: 	#(1 419740681 410 209 0 0 1 1)
+		lastKeyScanCode: 	13
+		combinedChar: 	nil
+		captureBlock: 	nil
+		recentModifiers: 	0
+
+
+HandMorph>>handleEvent:
+	Receiver: a HandMorph(899548672)
+	Arguments and temporary variables: 
+		anEvent: 	[(410@209) mouseUp 419740681 nil]
+		evt: 	[(410@209) mouseUp 419740681 nil
+	Receiver's instance variables: 
+		bounds: 	(410@209.0) corner: (426@225.0)
+		owner: 	a WorldMorph(684500736) [world]
+		submorphs: 	#()
+		fullBounds: 	(410@209.0) corner: (426@225.0)
+		color: 	Color blue
+		extension: 	a MorphExtension (629380608)
+		mouseFocus: 	nil
+		keyboardFocus: 	a SystemWindow(114001408) named: Griddlers
+		eventListeners: 	nil
+		mouseListeners: 	nil
+		mouseClickState: 	nil
+		mouseOverHandler: 	a MouseOverHandler
+		lastMouseEvent: 	[(410@209) mouseUp 419740681 nil]
+		targetOffset: 	(58.0@36.0)
+		damageRecorder: 	a DamageRecorder
+		cacheCanvas: 	nil
+		cachedCanvasHasHoles: 	false
+		temporaryCursor: 	nil
+		temporaryCursorOffset: 	nil
+		hardwareCursor: 	nil
+		hasChanged: 	true
+		savedPatch: 	nil
+		lastEventBuffer: 	#(1 419740681 410 209 0 0 1 1)
+		lastKeyScanCode: 	13
+		combinedChar: 	nil
+		captureBlock: 	nil
+		recentModifiers: 	0
+
+
+HandMorph>>processEventsFromQueue:
+	Receiver: a HandMorph(899548672)
+	Arguments and temporary variables: 
+		anEventQueue: 	an InputEventSensor
+		evt: 	[(410@209) mouseUp 419740681 nil]
+		evtBuf: 	#(1 419740681 410 209 0 0 1 1)
+		type: 	1
+		hadAny: 	fals
+	Receiver's instance variables: 
+		bounds: 	(410@209.0) corner: (426@225.0)
+		owner: 	a WorldMorph(684500736) [world]
+		submorphs: 	#()
+		fullBounds: 	(410@209.0) corner: (426@225.0)
+		color: 	Color blue
+		extension: 	a MorphExtension (629380608)
+		mouseFocus: 	nil
+		keyboardFocus: 	a SystemWindow(114001408) named: Griddlers
+		eventListeners: 	nil
+		mouseListeners: 	nil
+		mouseClickState: 	nil
+		mouseOverHandler: 	a MouseOverHandler
+		lastMouseEvent: 	[(410@209) mouseUp 419740681 nil]
+		targetOffset: 	(58.0@36.0)
+		damageRecorder: 	a DamageRecorder
+		cacheCanvas: 	nil
+		cachedCanvasHasHoles: 	false
+		temporaryCursor: 	nil
+		temporaryCursorOffset: 	nil
+		hardwareCursor: 	nil
+		hasChanged: 	true
+		savedPatch: 	nil
+		lastEventBuffer: 	#(1 419740681 410 209 0 0 1 1)
+		lastKeyScanCode: 	13
+		combinedChar: 	nil
+		captureBlock: 	nil
+		recentModifiers: 	0
+
+
+HandMorph>>processEvents
+	Receiver: a HandMorph(899548672)
+	Arguments and temporary variables: 
+
+	Receiver's instance variables: 
+		bounds: 	(410@209.0) corner: (426@225.0)
+		owner: 	a WorldMorph(684500736) [world]
+		submorphs: 	#()
+		fullBounds: 	(410@209.0) corner: (426@225.0)
+		color: 	Color blue
+		extension: 	a MorphExtension (629380608)
+		mouseFocus: 	nil
+		keyboardFocus: 	a SystemWindow(114001408) named: Griddlers
+		eventListeners: 	nil
+		mouseListeners: 	nil
+		mouseClickState: 	nil
+		mouseOverHandler: 	a MouseOverHandler
+		lastMouseEvent: 	[(410@209) mouseUp 419740681 nil]
+		targetOffset: 	(58.0@36.0)
+		damageRecorder: 	a DamageRecorder
+		cacheCanvas: 	nil
+		cachedCanvasHasHoles: 	false
+		temporaryCursor: 	nil
+		temporaryCursorOffset: 	nil
+		hardwareCursor: 	nil
+		hasChanged: 	true
+		savedPatch: 	nil
+		lastEventBuffer: 	#(1 419740681 410 209 0 0 1 1)
+		lastKeyScanCode: 	13
+		combinedChar: 	nil
+		captureBlock: 	nil
+		recentModifiers: 	0
+
+
+[ :h | 
+self activeHand: h.
+h processEvents.
+self activeHand: nil ] in WorldState>>doOneCycleNowFor:
+	Receiver: a WorldState
+	Arguments and temporary variables: 
+		aWorld: 	a WorldMorph(684500736) [world]
+		h: 	a HandMorph(899548672
+	Receiver's instance variables: 
+		hands: 	an Array(a HandMorph(899548672))
+		damageRecorder: 	a DamageRecorder
+		stepList: 	a Heap(StepMessage(#stepAt: -> a GLMSystemWindow(690315264) named: Pl...etc...
+		lastStepTime: 	1659049
+		lastStepMessage: 	nil
+		lastCycleTime: 	1659072
+		alarms: 	a Heap()
+		lastAlarmTime: 	1659049
+		menuBuilder: 	a PragmaMenuBuilder ( nil ) 
+		activeHand: 	a HandMorph(899548672)
+		currentCursor: 	((CursorWithMask
+	extent: (16@16)
+	depth: 1
+	fromArray: #(
+		2r0...etc...
+		worldRenderer: 	a VMWorldRenderer
+		realWindowExtent: 	(884@677)
+
+
+Array(SequenceableCollection)>>do:
+	Receiver: an Array(a HandMorph(899548672))
+	Arguments and temporary variables: 
+		aBlock: 	[ :h | 
+self activeHand: h.
+h processEvents.
+self activeHand: nil ]
+		index: 	
+	Receiver's instance variables: 
+an Array(a HandMorph(899548672))
+
+WorldState>>handsDo:
+	Receiver: a WorldState
+	Arguments and temporary variables: 
+		aBlock: 	[ :h | 
+self activeHand: h.
+h processEvents.
+self activeHand: nil 
+	Receiver's instance variables: 
+		hands: 	an Array(a HandMorph(899548672))
+		damageRecorder: 	a DamageRecorder
+		stepList: 	a Heap(StepMessage(#stepAt: -> a GLMSystemWindow(690315264) named: Pl...etc...
+		lastStepTime: 	1659049
+		lastStepMessage: 	nil
+		lastCycleTime: 	1659072
+		alarms: 	a Heap()
+		lastAlarmTime: 	1659049
+		menuBuilder: 	a PragmaMenuBuilder ( nil ) 
+		activeHand: 	a HandMorph(899548672)
+		currentCursor: 	((CursorWithMask
+	extent: (16@16)
+	depth: 1
+	fromArray: #(
+		2r0...etc...
+		worldRenderer: 	a VMWorldRenderer
+		realWindowExtent: 	(884@677)
+
+
+WorldState>>doOneCycleNowFor:
+	Receiver: a WorldState
+	Arguments and temporary variables: 
+		aWorld: 	a WorldMorph(684500736) [world
+	Receiver's instance variables: 
+		hands: 	an Array(a HandMorph(899548672))
+		damageRecorder: 	a DamageRecorder
+		stepList: 	a Heap(StepMessage(#stepAt: -> a GLMSystemWindow(690315264) named: Pl...etc...
+		lastStepTime: 	1659049
+		lastStepMessage: 	nil
+		lastCycleTime: 	1659072
+		alarms: 	a Heap()
+		lastAlarmTime: 	1659049
+		menuBuilder: 	a PragmaMenuBuilder ( nil ) 
+		activeHand: 	a HandMorph(899548672)
+		currentCursor: 	((CursorWithMask
+	extent: (16@16)
+	depth: 1
+	fromArray: #(
+		2r0...etc...
+		worldRenderer: 	a VMWorldRenderer
+		realWindowExtent: 	(884@677)
+
+
+WorldState>>doOneCycleFor:
+	Receiver: a WorldState
+	Arguments and temporary variables: 
+		aWorld: 	a WorldMorph(684500736) [world
+	Receiver's instance variables: 
+		hands: 	an Array(a HandMorph(899548672))
+		damageRecorder: 	a DamageRecorder
+		stepList: 	a Heap(StepMessage(#stepAt: -> a GLMSystemWindow(690315264) named: Pl...etc...
+		lastStepTime: 	1659049
+		lastStepMessage: 	nil
+		lastCycleTime: 	1659072
+		alarms: 	a Heap()
+		lastAlarmTime: 	1659049
+		menuBuilder: 	a PragmaMenuBuilder ( nil ) 
+		activeHand: 	a HandMorph(899548672)
+		currentCursor: 	((CursorWithMask
+	extent: (16@16)
+	depth: 1
+	fromArray: #(
+		2r0...etc...
+		worldRenderer: 	a VMWorldRenderer
+		realWindowExtent: 	(884@677)
+
+
+WorldMorph>>doOneCycle
+	Receiver: a WorldMorph(684500736) [world]
+	Arguments and temporary variables: 
+
+	Receiver's instance variables: 
+		bounds: 	(0@0) corner: (884@677)
+		owner: 	nil
+		submorphs: 	an Array(a TaskbarMorph(30485504) a MenubarMorph(1067345152) a Syste...etc...
+		fullBounds: 	(0@0) corner: (884@677)
+		color: 	(Color r: 0.29521016617790813 g: 0.29521016617790813 b: 0.29521016617790...etc...
+		extension: 	a MorphExtension (810071040) [other:  (dragEnabled -> true) (dropEna...etc...
+		borderWidth: 	0
+		borderColor: 	(Color r: 0.8611925708699902 g: 1.0 b: 0.7223851417399805 alpha: 1...etc...
+		backgroundMorph: 	nil
+		worldState: 	a WorldState
+		griddingOn: 	nil
+
+
+WorldMorph class>>doOneCycle
+	Receiver: WorldMorph
+	Arguments and temporary variables: 
+
+	Receiver's instance variables: 
+		superclass: 	PasteUpMorph
+		methodDict: 	a MethodDictionary(#acceptDroppingMorph:event:->WorldMorph>>#accept...etc...
+		format: 	65547
+		layout: 	a FixedLayout
+		organization: 	a ClassOrganization
+		subclasses: 	{AthensWorldMorph. OSWindowWorldMorph}
+		name: 	#WorldMorph
+		classPool: 	a Dictionary(#AllowDropFiles->nil #CursorOwnerWorld->a WorldMorph(68...etc...
+		sharedPools: 	an OrderedCollection()
+		environment: 	a SystemDictionary(lots of globals)
+		category: 	#'Morphic-Core-Worlds'
+		announcer: 	nil
+		displayScaleFactor: 	1
+
+
+[ [ WorldMorph doOneCycle.
+Processor yield.
+false ] whileFalse: [  ] ] in MorphicUIManager>>spawnNewProcess
+	Receiver: a MorphicUIManager
+	Arguments and temporary variables: 
+
+	Receiver's instance variables: 
+		activeTranscript: 	nil
+
+
+[ self value.
+Processor terminateActive ] in BlockClosure>>newProcess
+	Receiver: [ [ WorldMorph doOneCycle.
+Processor yield.
+false ] whileFalse: [  ] ]
+	Arguments and temporary variables: 
+
+	Receiver's instance variables: 
+		outerContext: 	MorphicUIManager>>spawnNewProcess
+		startpc: 	125
+		numArgs: 	0
+
+
+
+--- The full stack ---
+VentanaInicio(Object)>>doesNotUnderstand: #informacionInicio
+MorphEventSubscription>>notify:from:
+[ :s | result := result | ((s notify: anEvent from: sourceMorph) == true) ] in MorphicEventHandler>>notifyMorphsOfEvent:ofType:from:
+Set>>do:
+MorphicEventHandler>>notifyMorphsOfEvent:ofType:from:
+MorphicEventHandler>>mouseUp:fromMorph:
+ImageMorph(Morph)>>mouseUp:
+ImageMorph(Morph)>>handleMouseUp:
+MouseButtonEvent>>sentTo:
+ImageMorph(Morph)>>handleEvent:
+ImageMorph(Morph)>>handleFocusEvent:
+[ ActiveHand := self.
+ActiveEvent := anEvent.
+result := focusHolder
+	handleFocusEvent: (anEvent transformedBy: (focusHolder transformedFrom: self)) ] in HandMorph>>sendFocusEvent:to:clear:
+BlockClosure>>on:do:
+WorldMorph>>becomeActiveDuring:
+HandMorph>>sendFocusEvent:to:clear:
+HandMorph>>sendEvent:focus:clear:
+HandMorph>>sendMouseEvent:
+HandMorph>>handleEvent:
+HandMorph>>processEventsFromQueue:
+HandMorph>>processEvents
+[ :h | 
+self activeHand: h.
+h processEvents.
+self activeHand: nil ] in WorldState>>doOneCycleNowFor:
+Array(SequenceableCollection)>>do:
+WorldState>>handsDo:
+WorldState>>doOneCycleNowFor:
+WorldState>>doOneCycleFor:
+WorldMorph>>doOneCycle
+WorldMorph class>>doOneCycle
+[ [ WorldMorph doOneCycle.
+Processor yield.
+false ] whileFalse: [  ] ] in MorphicUIManager>>spawnNewProcess
+[ self value.
+Processor terminateActive ] in BlockClosure>>newProcess
+-------------------------------------------------------------------------------
+
